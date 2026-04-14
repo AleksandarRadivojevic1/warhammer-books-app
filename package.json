@@ -1,0 +1,24 @@
+{
+  "name": "warhammer-books-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Warhammer themed books and lore browsing site. The primary goal is a portfolio piece that demonstrates the full API in a polished, themed UI. Visitors can browse books, series, authors, and primarchs. Authenticated users can maintain favorites and a reading list. An admin can curate featured books shown on the homepage.",
+  "main": "index.js",
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "test:backend": "cd backend && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleksandarRadivojevic1/warhammer-books-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AleksandarRadivojevic1/warhammer-books-app/issues"
+  },
+  "homepage": "https://github.com/AleksandarRadivojevic1/warhammer-books-app#readme"
+}
