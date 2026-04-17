@@ -1,7 +1,7 @@
 const helmet = require('helmet');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
-const mongoSanitize = require('express-mongo-sanitize');
+const { sanitize } = require('express-mongo-sanitize');
 const env = require('../config/env');
 
 // Global rate limiter — applied to all routes.
@@ -33,8 +33,13 @@ const applySecurity = (app) => {
 
   app.use(globalLimiter);
 
-  // Strips MongoDB operators ($where, $gt, etc.) from request data to prevent NoSQL injection attacks.
-  app.use(mongoSanitize());
+  // Strips MongoDB operators ($where, $gt, etc.) from req.body to prevent NoSQL injection.
+  // Express 5 makes req.query a read-only getter, so we sanitize only req.body manually
+  // rather than using the middleware form which would attempt to reassign req.query.
+  app.use((req, res, next) => {
+    if (req.body) req.body = sanitize(req.body);
+    next();
+  });
 };
 
 module.exports = { applySecurity, authLimiter };
