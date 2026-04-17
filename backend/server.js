@@ -4,10 +4,11 @@ const env = require('./config/env');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const connectDB = require('./config/db');
+const { applySecurity, authLimiter } = require('./middleware/security');
 
 const app = express();
 
-// Parse incoming JSON bodies (capped at 10kb to limit payload abuse).
+applySecurity(app);
 app.use(cookieParser());
 app.use(express.json({ limit: '10kb' }));
 
