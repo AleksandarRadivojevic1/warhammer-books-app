@@ -24,6 +24,14 @@ app.use('/api/authors', require('./routes/authors'));
 app.use('/api/series', require('./routes/series'));
 app.use('/api/primarchs', require('./routes/primarchs'));
 
+const auth = require('./middleware/auth');
+const adminOnly = require('./middleware/adminOnly');
+
+// Featured is public — anyone can see the homepage strip.
+app.use('/api/featured', require('./routes/featured'));
+// Admin routes require a valid JWT and admin role.
+app.use('/api/admin', auth, adminOnly, require('./routes/admin'));
+
 app.use((req, res) => res.status(404).json({ error: 'Route not found' }));
 
 
