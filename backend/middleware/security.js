@@ -4,25 +4,34 @@ const rateLimit = require('express-rate-limit');
 const { sanitize } = require('express-mongo-sanitize');
 const env = require('../config/env');
 
-// Global rate limiter — applied to all routes.
-// Allows 100 requests per IP per 15 minutes before blocking.
-const globalLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 100,
-  standardHeaders: true,
-  legacyHeaders: false,
-  message: { error: 'Too many requests, please try again later.' },
-});
+const isTest = process.env.NODE_ENV === 'test';
+
+// In test mode, replace limiters with a no-op so tests never hit 429.
+// Rate limiting is a production concern — testing it would require resetting
+// the limiter store between every test, which adds noise without value.
+const noOp = (req, res, next) => next();
+
+const globalLimiter = isTest
+  ? noOp
+  : rateLimit({
+      windowMs: 15 * 60 * 1000,
+      max: 100,
+      standardHeaders: true,
+      legacyHeaders: false,
+      message: { error: 'Too many requests, please try again later.' },
+    });
 
 // Stricter rate limiter for auth routes to slow down brute force attempts.
 // 10 requests per IP per 15 minutes.
-const authLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 10,
-  standardHeaders: true,
-  legacyHeaders: false,
-  message: { error: 'Too many auth attempts, please try again later.' },
-});
+const authLimiter = isTest
+  ? noOp
+  : rateLimit({
+      windowMs: 15 * 60 * 1000,
+      max: 10,
+      standardHeaders: true,
+      legacyHeaders: false,
+      message: { error: 'Too many auth attempts, please try again later.' },
+    });
 
 const applySecurity = (app) => {
   // Sets secure HTTP headers (XSS protection, no sniffing, etc.).

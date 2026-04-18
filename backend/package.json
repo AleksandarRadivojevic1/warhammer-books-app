@@ -10,7 +10,12 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "testTimeout": 30000
+    "testTimeout": 30000,
+    "testEnvironmentOptions": {
+      "env": {
+        "NODE_ENV": "test"
+      }
+    }
   },
   "keywords": [],
   "author": "",

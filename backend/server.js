@@ -15,6 +15,14 @@ app.use(express.json({ limit: '10kb' }));
 // Simple health check — useful for uptime monitoring and smoke tests.
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
+// Auth routes get the stricter rate limiter (10 req / 15 min) to slow brute force.
+app.use('/api/auth', authLimiter, require('./routes/auth'));
+
+// Proxy routes — forward requests to the external Warhammer Books API.
+app.use('/api/books', require('./routes/books'));
+app.use('/api/authors', require('./routes/authors'));
+app.use('/api/series', require('./routes/series'));
+app.use('/api/primarchs', require('./routes/primarchs'));
 
 app.use((req, res) => res.status(404).json({ error: 'Route not found' }));
 
