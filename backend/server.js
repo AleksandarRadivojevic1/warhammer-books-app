@@ -32,6 +32,9 @@ app.use('/api/featured', require('./routes/featured'));
 // Admin routes require a valid JWT and admin role.
 app.use('/api/admin', auth, adminOnly, require('./routes/admin'));
 
+// User routes — favorites and reading list, requires auth.
+app.use('/api/user', auth, require('./routes/user'));
+
 app.use((req, res) => res.status(404).json({ error: 'Route not found' }));
 
 
