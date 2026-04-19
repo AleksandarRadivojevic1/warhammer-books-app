@@ -5,6 +5,8 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const connectDB = require('./config/db');
 const { applySecurity, authLimiter } = require('./middleware/security');
+const auth = require('./middleware/auth');
+const adminOnly = require('./middleware/adminOnly');
 
 const app = express();
 
@@ -24,14 +26,10 @@ app.use('/api/authors', require('./routes/authors'));
 app.use('/api/series', require('./routes/series'));
 app.use('/api/primarchs', require('./routes/primarchs'));
 
-const auth = require('./middleware/auth');
-const adminOnly = require('./middleware/adminOnly');
-
 // Featured is public — anyone can see the homepage strip.
 app.use('/api/featured', require('./routes/featured'));
 // Admin routes require a valid JWT and admin role.
 app.use('/api/admin', auth, adminOnly, require('./routes/admin'));
-
 // User routes — favorites and reading list, requires auth.
 app.use('/api/user', auth, require('./routes/user'));
 

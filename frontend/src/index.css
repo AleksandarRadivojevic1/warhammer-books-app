@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #111318;
+    color: #e8eaf0;
+    font-family: system-ui, sans-serif;
+  }
+
+  h1, h2, h3 {
+    color: #e8eaf0;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  hr {
+    border-color: rgba(42, 46, 58, 1);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-imperial-gold text-imperial-bg font-bold px-5 py-2 rounded text-sm uppercase tracking-wide hover:brightness-110 transition-all;
+  }
+
+  .btn-outline {
+    @apply border border-imperial-border text-imperial-muted px-5 py-2 rounded text-sm uppercase tracking-wide hover:border-imperial-gold hover:text-imperial-gold transition-colors;
+  }
+
+  .card {
+    @apply bg-imperial-bg-light border border-imperial-border rounded overflow-hidden hover:border-imperial-gold/50 transition-colors;
+  }
+
+  .input {
+    @apply bg-imperial-bg-light border border-imperial-border rounded px-3 py-2 w-full text-sm focus:outline-none focus:border-imperial-gold transition-colors;
+    color: #e8eaf0;
+  }
+
+  .label {
+    @apply text-xs text-imperial-gold font-semibold uppercase tracking-widest;
+  }
+}
