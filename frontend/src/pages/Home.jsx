@@ -35,7 +35,7 @@ function HeroBanner() {
           Librarium
         </h1>
         <p className="text-imperial-light/60 max-w-lg mx-auto mb-8 text-base leading-relaxed">
-          Browse the chronicles of the Warhammer Universe — books, series, primarchs, and the authors who shaped the lore.
+          Browse the chronicles of the Warhammer Universe - books, series, primarchs, and the authors who shaped the lore.
         </p>
         <Link to="/books" className="btn-gold text-sm px-10 py-3">
           Browse the Library

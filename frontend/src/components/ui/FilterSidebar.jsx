@@ -32,7 +32,7 @@ export default function FilterSidebar({ filters, onChange }) {
       <div>
         <label className="label block mb-1">Search</label>
         <input
-          className="input"
+          className="input font-serif text-imperial-gold placeholder:text-imperial-gold/30"
           placeholder="Title or keyword..."
           value={filters.search ?? ''}
           onChange={handle('search')}

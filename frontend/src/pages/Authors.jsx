@@ -13,16 +13,21 @@ export default function Authors() {
 
   return (
     <div>
-      <h1 className="text-3xl mb-8">Authors</h1>
+      <h1 className="text-3xl mb-8 animate-fade-in">Authors</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {authors.map((author) => (
-          <Link key={author.slug} to={`/authors/${author.slug}`} className="card p-4 flex gap-4 items-start">
-            <div className="w-14 h-14 shrink-0 rounded-full overflow-hidden bg-imperial-bg-mid border border-imperial-border">
+        {authors.map((author, i) => (
+          <Link
+            key={author.slug}
+            to={`/authors/${author.slug}`}
+            className="card p-4 flex gap-4 items-start group hover:border-imperial-gold/40 transition-colors animate-fade-in-up"
+            style={{ animationDelay: `${i * 30}ms` }}
+          >
+            <div className="w-16 h-16 shrink-0 rounded-full overflow-hidden bg-imperial-bg-mid border border-imperial-border group-hover:border-imperial-gold/40 transition-colors">
               {author.image ? (
                 <img
                   src={author.image}
                   alt={author.name}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-imperial-muted text-xs">?</div>

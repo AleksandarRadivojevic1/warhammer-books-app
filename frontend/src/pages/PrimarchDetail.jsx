@@ -5,9 +5,26 @@ import BackButton from '../components/ui/BackButton';
 
 const slugFrom = (url) => url?.split('/').at(-1);
 
-const alignmentStyle = {
-  Loyalist: 'border-imperial-gold/60 text-imperial-gold',
-  Traitor:  'border-red-800/60 text-red-400',
+const alignmentTheme = {
+  Loyalist: {
+    border: 'border-imperial-gold/40',
+    badge: 'border-imperial-gold/60 text-imperial-gold',
+    accent: 'bg-imperial-gold',
+    label: 'text-imperial-gold/50',
+  },
+  Traitor: {
+    border: 'border-red-800/40',
+    badge: 'border-red-800/60 text-red-400',
+    accent: 'bg-red-600',
+    label: 'text-red-400/50',
+  },
+};
+
+const fallback = {
+  border: 'border-imperial-border',
+  badge: 'border-imperial-border text-imperial-muted',
+  accent: 'bg-imperial-muted',
+  label: 'text-imperial-muted/50',
 };
 
 export default function PrimarchDetail() {
@@ -18,61 +35,77 @@ export default function PrimarchDetail() {
   if (isError) return <p className="text-imperial-muted">Primarch not found.</p>;
 
   const books = primarch?.books ?? [];
-  const style = alignmentStyle[primarch.alignment] ?? 'border-imperial-border text-imperial-muted';
+  const t = alignmentTheme[primarch.alignment] ?? fallback;
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto animate-fade-in">
       <BackButton />
-      <div className="flex flex-col md:flex-row gap-8 mb-10">
-        <div className="w-full md:w-72 shrink-0">
-          {primarch.image ? (
-            <img
-              src={primarch.image}
-              alt={primarch.name}
-              className="w-full rounded border border-imperial-border object-cover"
-            />
-          ) : (
-            <div className="aspect-[3/4] bg-imperial-bg-light rounded border border-imperial-border flex items-center justify-center text-imperial-muted text-sm">
-              No image
-            </div>
-          )}
-        </div>
 
-        <div className="flex-1">
-          <h1 className="text-3xl mb-1">{primarch.name}</h1>
+      {/* Cinematic header */}
+      <div className={`relative flex flex-col md:flex-row overflow-hidden rounded border ${t.border} bg-imperial-bg-mid mb-10`}>
+        {/* Content — left */}
+        <div className="flex flex-col justify-center px-8 py-10 md:py-16 md:w-1/2 gap-4 z-10">
+          <p className={`text-xs tracking-widest uppercase font-serif ${t.label}`}>Primarch</p>
+          <h1 className="text-4xl md:text-5xl leading-none tracking-wide">{primarch.name}</h1>
           {primarch.legion && (
-            <p className="text-imperial-muted text-lg mb-4">{primarch.legion}</p>
+            <p className="font-serif text-imperial-gold/70 text-xl tracking-wide">{primarch.legion}</p>
           )}
-          <div className="flex flex-wrap gap-3 mb-4">
+          <div className="flex flex-wrap items-center gap-3 mt-1">
+            <span className={`${t.accent} w-6 h-px`} />
             {primarch.alignment && (
-              <span className={`text-sm px-3 py-1 rounded-full border ${style}`}>
+              <span className={`text-xs px-2.5 py-1 rounded-full border ${t.badge}`}>
                 {primarch.alignment}
               </span>
             )}
             {primarch.status && (
-              <span className="text-sm px-3 py-1 rounded-full border border-imperial-border text-imperial-muted">
+              <span className="text-xs px-2.5 py-1 rounded-full border border-imperial-border text-imperial-muted">
                 {primarch.status}
               </span>
             )}
           </div>
           {primarch.fate && (
-            <p className="text-imperial-muted text-sm italic">{primarch.fate}</p>
+            <p className="text-sm text-imperial-muted/70 italic mt-2 leading-relaxed border-l-2 border-imperial-gold/20 pl-4">
+              {primarch.fate}
+            </p>
           )}
+        </div>
+
+        {/* Image — right */}
+        <div className="md:w-1/2 aspect-[4/3] md:aspect-auto md:min-h-[380px] overflow-hidden relative">
+          {primarch.image ? (
+            <img
+              src={primarch.image}
+              alt={primarch.name}
+              className="w-full h-full object-cover object-top"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-imperial-muted text-sm bg-imperial-bg">
+              No image
+            </div>
+          )}
+          <div
+            className="absolute inset-y-0 left-0 w-24 hidden md:block"
+            style={{ background: 'linear-gradient(to right, #1a1c23, transparent)' }}
+          />
         </div>
       </div>
 
       {books.length > 0 && (
         <section>
-          <h2 className="text-xl mb-4">Featured In</h2>
+          <h2 className="text-2xl mb-4">Featured In</h2>
           <ul className="flex flex-col gap-2">
-            {books.map((book) => (
-              <li key={book.url}>
+            {books.map((book, i) => (
+              <li
+                key={book.url}
+                className="animate-fade-in-up"
+                style={{ animationDelay: `${i * 40}ms` }}
+              >
                 <Link
                   to={`/books/${slugFrom(book.url)}`}
-                  className="card px-4 py-3 flex items-center justify-between hover:border-imperial-gold/50 transition-colors"
+                  className="card px-4 py-3 flex items-center justify-between hover:border-imperial-gold/50 transition-colors group"
                 >
-                  <span className="text-imperial-light">{book.title}</span>
-                  <span className="text-imperial-muted text-sm">→</span>
+                  <span className="text-imperial-light group-hover:text-imperial-gold transition-colors">{book.title}</span>
+                  <span className="text-imperial-muted text-sm group-hover:text-imperial-gold transition-colors">→</span>
                 </Link>
               </li>
             ))}

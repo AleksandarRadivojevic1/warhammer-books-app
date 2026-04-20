@@ -10,14 +10,26 @@ export default function Series() {
 
   return (
     <div>
-      <h1 className="text-3xl mb-8">Series</h1>
+      <h1 className="text-3xl mb-8 animate-fade-in">Series</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {series.map((s) => (
-          <Link key={s.slug} to={`/series/${s.slug}`} className="card p-4">
-            <h3 className="font-serif text-lg text-imperial-gold mb-1">{s.name}</h3>
-            {s.era && (
-              <span className="text-xs text-imperial-muted uppercase tracking-wide">{s.era}</span>
-            )}
+        {series.map((s, i) => (
+          <Link
+            key={s.slug}
+            to={`/series/${s.slug}`}
+            className="card p-5 flex flex-col gap-3 group hover:border-imperial-gold/40 transition-colors animate-fade-in-up"
+            style={{ animationDelay: `${i * 30}ms` }}
+          >
+            <div className="flex items-start justify-between gap-2">
+              <h3 className="font-serif text-lg text-imperial-gold leading-tight">{s.name}</h3>
+              {s.era && (
+                <span className="text-xs shrink-0 px-2 py-0.5 rounded-full border border-imperial-border text-imperial-muted">
+                  {s.era}
+                </span>
+              )}
+            </div>
+            <span className="text-imperial-muted/40 text-xs tracking-widest group-hover:text-imperial-gold/50 transition-colors">
+              View series →
+            </span>
           </Link>
         ))}
       </div>
