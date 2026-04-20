@@ -13,7 +13,7 @@ export default function Navbar() {
     <header className="bg-imperial-bg-mid border-b border-imperial-border">
       <nav className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link to="/" className="font-serif text-xl text-imperial-gold tracking-wide">
-          Warhammer Library
+          Librarium
         </Link>
 
         <div className="flex items-center gap-6 text-sm">
