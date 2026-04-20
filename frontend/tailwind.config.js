@@ -17,7 +17,7 @@ export default {
         },
       },
       fontFamily: {
-        serif: ['Georgia', 'Cambria', 'serif'],
+        serif: ['Cinzel', 'Georgia', 'serif'],
         sans:  ['system-ui', 'sans-serif'],
       },
     },

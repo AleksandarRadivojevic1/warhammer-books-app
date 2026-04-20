@@ -2,9 +2,52 @@ const express = require('express');
 const { body } = require('express-validator');
 const validate = require('../middleware/validate');
 const FeaturedBook = require('../models/FeaturedBook');
+const Favorite = require('../models/Favorite');
+const ReadingList = require('../models/ReadingList');
+const User = require('../models/User');
 const { proxy } = require('../utils/proxy');
 
 const router = express.Router();
+
+// GET /api/admin/stats
+router.get('/stats', async (req, res, next) => {
+  try {
+    const [
+      totalUsers,
+      totalFavorites,
+      totalReadingList,
+      statusBreakdown,
+      topFavorited,
+      topReadingList,
+    ] = await Promise.all([
+      User.countDocuments(),
+      Favorite.countDocuments(),
+      ReadingList.countDocuments(),
+      ReadingList.aggregate([
+        { $group: { _id: '$status', count: { $sum: 1 } } },
+      ]),
+      Favorite.aggregate([
+        { $group: { _id: '$bookSlug', count: { $sum: 1 } } },
+        { $sort: { count: -1 } },
+        { $limit: 5 },
+      ]),
+      ReadingList.aggregate([
+        { $group: { _id: '$bookSlug', count: { $sum: 1 } } },
+        { $sort: { count: -1 } },
+        { $limit: 5 },
+      ]),
+    ]);
+
+    res.json({
+      totals: { users: totalUsers, favorites: totalFavorites, readingList: totalReadingList },
+      statusBreakdown: Object.fromEntries(statusBreakdown.map(({ _id, count }) => [_id, count])),
+      topFavorited: topFavorited.map(({ _id, count }) => ({ bookSlug: _id, count })),
+      topReadingList: topReadingList.map(({ _id, count }) => ({ bookSlug: _id, count })),
+    });
+  } catch (err) {
+    next(err);
+  }
+});
 
 // POST /api/admin/featured
 router.post(

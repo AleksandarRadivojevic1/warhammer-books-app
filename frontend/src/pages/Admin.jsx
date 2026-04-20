@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { Link } from 'react-router-dom';
 import {
   DndContext,
   closestCenter,
@@ -28,6 +29,16 @@ function useFeaturedAdmin() {
   });
 }
 
+function useAdminStats() {
+  return useQuery({
+    queryKey: ['admin-stats'],
+    queryFn: async () => {
+      const { data } = await client.get('/api/admin/stats');
+      return data;
+    },
+  });
+}
+
 function useAddFeatured() {
   const qc = useQueryClient();
   return useMutation({
@@ -50,6 +61,66 @@ function useReorderFeatured() {
     mutationFn: (ids) => client.put('/api/admin/featured/reorder', { ids }),
     onSuccess: () => qc.invalidateQueries({ queryKey: ['featured'] }),
   });
+}
+
+function StatCard({ label, value }) {
+  return (
+    <div className="card px-5 py-4 flex flex-col gap-1">
+      <span className="text-3xl font-bold text-imperial-gold">{value ?? '—'}</span>
+      <span className="text-xs text-imperial-muted uppercase tracking-widest">{label}</span>
+    </div>
+  );
+}
+
+function TopBooksList({ title, books }) {
+  if (!books?.length) return null;
+  return (
+    <div>
+      <h3 className="label mb-3">{title}</h3>
+      <ol className="flex flex-col gap-1.5">
+        {books.map((book, i) => (
+          <li key={book.bookSlug} className="flex items-center gap-3 text-sm">
+            <span className="text-imperial-muted w-4 text-right shrink-0">{i + 1}.</span>
+            <Link
+              to={`/books/${book.bookSlug}`}
+              className="text-imperial-gold hover:underline flex-1 truncate"
+            >
+              {book.bookSlug}
+            </Link>
+            <span className="text-imperial-muted shrink-0">{book.count}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+function Dashboard() {
+  const { data: stats, isLoading } = useAdminStats();
+
+  if (isLoading) return <Spinner />;
+
+  const { totals, statusBreakdown = {}, topFavorited = [], topReadingList = [] } = stats ?? {};
+
+  return (
+    <section className="mb-12">
+      <h2 className="text-xl mb-4">Overview</h2>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+        <StatCard label="Users" value={totals?.users} />
+        <StatCard label="Favorites" value={totals?.favorites} />
+        <StatCard label="Reading List" value={totals?.readingList} />
+        <StatCard label="Want to Read" value={statusBreakdown['want-to-read'] ?? 0} />
+        <StatCard label="Reading" value={statusBreakdown['reading'] ?? 0} />
+        <StatCard label="Completed" value={statusBreakdown['completed'] ?? 0} />
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <TopBooksList title="Most Favorited" books={topFavorited} />
+        <TopBooksList title="Most Added to Reading List" books={topReadingList} />
+      </div>
+    </section>
+  );
 }
 
 function SortableItem({ book, onRemove }) {
@@ -131,9 +202,13 @@ export default function Admin() {
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-3xl mb-2">Admin</h1>
-      <p className="text-imperial-muted mb-10">Manage featured books shown on the homepage.</p>
+      <p className="text-imperial-muted mb-10">Manage featured books and monitor app activity.</p>
 
-      <section className="mb-10">
+      <Dashboard />
+
+      <hr />
+
+      <section className="mb-10 mt-10">
         <h2 className="text-xl mb-4">Add Featured Book</h2>
         <form onSubmit={handleAdd} className="flex gap-3">
           <input
