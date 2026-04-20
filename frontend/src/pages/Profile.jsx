@@ -4,9 +4,20 @@ import {
   useFavorites, useRemoveFavorite,
   useReadingList, useUpdateReadingStatus, useRemoveFromReadingList,
 } from '../hooks/useUser';
+import { useBook } from '../hooks/useBooks';
 import Spinner from '../components/ui/Spinner';
 
-const STATUSES = ['want-to-read', 'reading', 'completed'];
+const STATUSES = [
+  { value: 'want-to-read', label: 'Want to Read' },
+  { value: 'reading',      label: 'Reading' },
+  { value: 'completed',    label: 'Completed' },
+];
+
+// Fetches the book title for a given slug. Falls back to the slug if not yet loaded.
+function BookTitle({ slug }) {
+  const { data: book } = useBook(slug);
+  return <>{book?.title ?? slug}</>;
+}
 
 function FavoritesSection() {
   const { data: favorites = [], isLoading } = useFavorites();
@@ -28,11 +39,11 @@ function FavoritesSection() {
           {favorites.map((fav) => (
             <li key={fav.bookSlug} className="card px-4 py-3 flex items-center justify-between">
               <Link to={`/books/${fav.bookSlug}`} className="text-imperial-gold hover:underline">
-                {fav.bookSlug}
+                <BookTitle slug={fav.bookSlug} />
               </Link>
               <button
                 onClick={() => remove.mutate(fav.bookSlug)}
-                className="text-imperial-muted hover:text-red-400 text-sm transition-colors"
+                className="text-imperial-muted hover:text-red-400 text-sm transition-colors shrink-0 ml-4"
               >
                 Remove
               </button>
@@ -59,25 +70,33 @@ function ReadingListSection() {
       ) : (
         <ul className="flex flex-col gap-2">
           {list.map((item) => (
-            <li key={item.bookSlug} className="card px-4 py-3 flex items-center justify-between gap-4">
-              <Link to={`/books/${item.bookSlug}`} className="text-imperial-gold hover:underline flex-1">
-                {item.bookSlug}
-              </Link>
-              <select
-                className="input w-auto text-sm"
-                value={item.status}
-                onChange={(e) => updateStatus.mutate({ slug: item.bookSlug, status: e.target.value })}
-              >
-                {STATUSES.map((s) => (
-                  <option key={s} value={s}>{s}</option>
+            <li key={item.bookSlug} className="card px-4 py-3 flex flex-col gap-3">
+              <div className="flex items-center justify-between">
+                <Link to={`/books/${item.bookSlug}`} className="text-imperial-gold hover:underline">
+                  <BookTitle slug={item.bookSlug} />
+                </Link>
+                <button
+                  onClick={() => remove.mutate(item.bookSlug)}
+                  className="text-imperial-muted hover:text-red-400 text-sm transition-colors shrink-0 ml-4"
+                >
+                  Remove
+                </button>
+              </div>
+              <div className="flex items-center gap-1">
+                {STATUSES.map(({ value, label }) => (
+                  <button
+                    key={value}
+                    onClick={() => updateStatus.mutate({ slug: item.bookSlug, status: value })}
+                    className={`text-xs px-3 py-1.5 rounded-full border transition-colors ${
+                      item.status === value
+                        ? 'border-imperial-gold text-imperial-gold bg-imperial-gold/10'
+                        : 'border-imperial-border text-imperial-muted hover:border-imperial-gold/50 hover:text-imperial-light'
+                    }`}
+                  >
+                    {label}
+                  </button>
                 ))}
-              </select>
-              <button
-                onClick={() => remove.mutate(item.bookSlug)}
-                className="text-imperial-muted hover:text-red-400 text-sm transition-colors shrink-0"
-              >
-                Remove
-              </button>
+              </div>
             </li>
           ))}
         </ul>

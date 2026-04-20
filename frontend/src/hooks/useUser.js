@@ -37,6 +37,14 @@ export function useReadingList() {
   });
 }
 
+export function useAddToReadingList() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ slug, status }) => client.post('/api/user/reading-list', { bookSlug: slug, status }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['reading-list'] }),
+  });
+}
+
 export function useUpdateReadingStatus() {
   const qc = useQueryClient();
   return useMutation({

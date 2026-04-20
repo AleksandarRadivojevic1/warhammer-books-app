@@ -1,6 +1,10 @@
 import { useParams, Link } from 'react-router-dom';
 import { useBook, useRelatedBooks } from '../hooks/useBooks';
-import BookCard from '../components/ui/BookCard';
+import {
+  useFavorites, useAddFavorite, useRemoveFavorite,
+  useReadingList, useAddToReadingList, useUpdateReadingStatus, useRemoveFromReadingList,
+} from '../hooks/useUser';
+import { useAuth } from '../hooks/useAuth';
 import RelatedBooks from '../components/ui/RelatedBooks';
 import Spinner from '../components/ui/Spinner';
 import BackButton from '../components/ui/BackButton';
@@ -8,8 +12,80 @@ import BackButton from '../components/ui/BackButton';
 // The API returns author/series/primarchs as { name, url } — extract the slug from the URL end.
 const slugFrom = (url) => url?.split('/').at(-1);
 
+const STATUSES = [
+  { value: 'want-to-read', label: 'Want to Read' },
+  { value: 'reading',      label: 'Reading' },
+  { value: 'completed',    label: 'Completed' },
+];
+
+function BookActions({ slug }) {
+  const { data: favorites = [] } = useFavorites();
+  const { data: readingList = [] } = useReadingList();
+  const addFav = useAddFavorite();
+  const removeFav = useRemoveFavorite();
+  const addToList = useAddToReadingList();
+  const updateStatus = useUpdateReadingStatus();
+  const removeFromList = useRemoveFromReadingList();
+
+  const isFav = favorites.some((f) => f.bookSlug === slug);
+  const listEntry = readingList.find((item) => item.bookSlug === slug);
+
+  return (
+    <div className="flex flex-wrap items-center gap-4 mt-6 pt-6 border-t border-imperial-border">
+      {/* Favorite toggle */}
+      <button
+        onClick={() => isFav ? removeFav.mutate(slug) : addFav.mutate(slug)}
+        disabled={addFav.isPending || removeFav.isPending}
+        className={`flex items-center gap-2 text-sm transition-colors ${
+          isFav
+            ? 'text-imperial-gold'
+            : 'text-imperial-muted hover:text-imperial-gold'
+        }`}
+      >
+        <span className="text-lg leading-none">{isFav ? '♥' : '♡'}</span>
+        {isFav ? 'Favorited' : 'Add to Favorites'}
+      </button>
+
+      <div className="w-px h-5 bg-imperial-border" />
+
+      {/* Reading list */}
+      {listEntry ? (
+        <div className="flex items-center gap-1">
+          {STATUSES.map(({ value, label }) => (
+            <button
+              key={value}
+              onClick={() =>
+                value === listEntry.status
+                  ? removeFromList.mutate(slug)
+                  : updateStatus.mutate({ slug, status: value })
+              }
+              className={`text-xs px-3 py-1.5 rounded-full border transition-colors ${
+                listEntry.status === value
+                  ? 'border-imperial-gold text-imperial-gold bg-imperial-gold/10'
+                  : 'border-imperial-border text-imperial-muted hover:border-imperial-gold/50 hover:text-imperial-light'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      ) : (
+        <button
+          onClick={() => addToList.mutate({ slug, status: 'want-to-read' })}
+          disabled={addToList.isPending}
+          className="text-xs px-4 py-1.5 rounded-full border border-imperial-border text-imperial-muted hover:border-imperial-gold hover:text-imperial-gold transition-colors tracking-wide uppercase"
+        >
+          + Add to Reading List
+        </button>
+      )}
+    </div>
+  );
+}
+
+
 export default function BookDetail() {
   const { slug } = useParams();
+  const { user } = useAuth();
   const { data: book, isLoading, isError } = useBook(slug);
   const { data: related } = useRelatedBooks(slug);
 
@@ -88,6 +164,8 @@ export default function BookDetail() {
               </div>
             </div>
           )}
+
+          {user && <BookActions slug={slug} />}
         </div>
       </div>
 
