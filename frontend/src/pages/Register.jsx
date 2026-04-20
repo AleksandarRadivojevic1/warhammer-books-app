@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
+import AuthLayout from '../components/layout/AuthLayout';
 
 export default function Register() {
   const { register, login } = useAuth();
@@ -15,14 +16,8 @@ export default function Register() {
   const submit = async (e) => {
     e.preventDefault();
     setError('');
-    if (form.password !== form.confirm) {
-      setError('Passwords do not match');
-      return;
-    }
-    if (form.password.length < 8) {
-      setError('Password must be at least 8 characters');
-      return;
-    }
+    if (form.password !== form.confirm) { setError('Passwords do not match'); return; }
+    if (form.password.length < 8) { setError('Password must be at least 8 characters'); return; }
     setLoading(true);
     try {
       await register(form.email, form.password);
@@ -36,8 +31,7 @@ export default function Register() {
   };
 
   return (
-    <div className="max-w-sm mx-auto mt-16">
-      <h1 className="text-3xl mb-8 text-center">Create Account</h1>
+    <AuthLayout title="Create Account" eyebrow="Join the Librarium" flip>
       <form onSubmit={submit} className="flex flex-col gap-4">
         <div>
           <label className="label block mb-1">Email</label>
@@ -53,13 +47,13 @@ export default function Register() {
         </div>
         {error && <p className="text-red-400 text-sm">{error}</p>}
         <button className="btn-gold mt-2" type="submit" disabled={loading}>
-          {loading ? 'Creating account...' : 'Register'}
+          {loading ? 'Creating account...' : 'Join the Librarium'}
         </button>
       </form>
       <p className="text-center text-imperial-muted text-sm mt-6">
         Already have an account?{' '}
         <Link to="/login" className="text-imperial-gold hover:underline">Login</Link>
       </p>
-    </div>
+    </AuthLayout>
   );
 }

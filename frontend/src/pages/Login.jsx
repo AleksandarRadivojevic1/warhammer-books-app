@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
+import AuthLayout from '../components/layout/AuthLayout';
 
 export default function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  // Redirect back to the page the user tried to visit before being sent to /login.
   const from = location.state?.from?.pathname ?? '/';
 
   const [form, setForm] = useState({ email: '', password: '' });
@@ -30,8 +30,7 @@ export default function Login() {
   };
 
   return (
-    <div className="max-w-sm mx-auto mt-16">
-      <h1 className="text-3xl mb-8 text-center">Login</h1>
+    <AuthLayout title="Login" eyebrow="Welcome back">
       <form onSubmit={submit} className="flex flex-col gap-4">
         <div>
           <label className="label block mb-1">Email</label>
@@ -43,13 +42,13 @@ export default function Login() {
         </div>
         {error && <p className="text-red-400 text-sm">{error}</p>}
         <button className="btn-gold mt-2" type="submit" disabled={loading}>
-          {loading ? 'Logging in...' : 'Login'}
+          {loading ? 'Entering...' : 'Enter the Librarium'}
         </button>
       </form>
       <p className="text-center text-imperial-muted text-sm mt-6">
         No account?{' '}
         <Link to="/register" className="text-imperial-gold hover:underline">Register</Link>
       </p>
-    </div>
+    </AuthLayout>
   );
 }

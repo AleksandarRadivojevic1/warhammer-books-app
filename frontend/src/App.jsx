@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import RequireAuth from './components/guards/RequireAuth';
@@ -18,12 +18,29 @@ import Register from './pages/Register';
 import Profile from './pages/Profile';
 import Admin from './pages/Admin';
 
+// Auth pages need full-width layout — no max-w or padding constraints.
+function AuthWrapper() {
+  return <main className="flex-1 flex flex-col"><Outlet /></main>;
+}
+
+function ContentWrapper() {
+  return (
+    <main className="flex-1 max-w-6xl mx-auto w-full px-4 py-8">
+      <Outlet />
+    </main>
+  );
+}
+
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1 max-w-6xl mx-auto w-full px-4 py-8">
-        <Routes>
+      <Routes>
+        <Route element={<AuthWrapper />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Route>
+        <Route element={<ContentWrapper />}>
           <Route path="/" element={<Home />} />
           <Route path="/books" element={<Books />} />
           <Route path="/books/:slug" element={<BookDetail />} />
@@ -33,12 +50,10 @@ export default function App() {
           <Route path="/series/:slug" element={<SeriesDetail />} />
           <Route path="/primarchs" element={<Primarchs />} />
           <Route path="/primarchs/:slug" element={<PrimarchDetail />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
           <Route path="/admin" element={<RequireAdmin><Admin /></RequireAdmin>} />
-        </Routes>
-      </main>
+        </Route>
+      </Routes>
       <Footer />
     </div>
   );
