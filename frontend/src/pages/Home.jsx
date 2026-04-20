@@ -27,11 +27,11 @@ function HeroBanner() {
         style={{ background: 'linear-gradient(to bottom, transparent, #111318)' }}
       />
 
-      <div className="relative z-10">
+      <div className="relative z-10 animate-fade-in-up">
         <p className="text-imperial-muted text-xs tracking-widest uppercase mb-5">
           In the grim darkness of the far future
         </p>
-        <h1 className="text-5xl md:text-7xl mb-6 leading-none tracking-wide">
+        <h1 className="text-5xl md:text-7xl mb-6 leading-none tracking-widest font-black">
           Librarium
         </h1>
         <p className="text-imperial-light/60 max-w-lg mx-auto mb-8 text-base leading-relaxed">

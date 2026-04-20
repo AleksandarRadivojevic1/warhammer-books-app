@@ -3,7 +3,9 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 
 const linkClass = ({ isActive }) =>
-  isActive ? 'text-imperial-gold' : 'text-imperial-muted hover:text-imperial-gold transition-colors';
+  isActive
+    ? 'font-serif text-sm tracking-wide text-imperial-gold'
+    : 'font-serif text-sm tracking-wide text-imperial-muted hover:text-imperial-gold transition-colors';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -40,9 +42,10 @@ export default function Navbar() {
               {user.role === 'admin' && (
                 <NavLink to="/admin" className={linkClass}>Admin</NavLink>
               )}
+              <span className="w-px h-4 bg-imperial-border" />
               <button
                 onClick={logout}
-                className="text-imperial-muted hover:text-imperial-gold transition-colors"
+                className="font-serif text-sm tracking-wide text-imperial-muted hover:text-imperial-gold transition-colors"
               >
                 Logout
               </button>
@@ -50,7 +53,12 @@ export default function Navbar() {
           ) : (
             <>
               <NavLink to="/login" className={linkClass}>Login</NavLink>
-              <NavLink to="/register" className="btn-gold text-sm px-4 py-1.5">Register</NavLink>
+              <NavLink
+                to="/register"
+                className="font-serif text-sm tracking-wide border border-imperial-gold text-imperial-gold px-4 py-1.5 hover:bg-imperial-gold hover:text-imperial-bg transition-all"
+              >
+                Register
+              </NavLink>
             </>
           )}
         </div>
@@ -69,7 +77,7 @@ export default function Navbar() {
 
       {/* Full-screen overlay — mobile */}
       {open && (
-        <div className="fixed inset-0 z-50 bg-imperial-bg flex flex-col px-8 py-6">
+        <div className="fixed inset-0 z-50 bg-imperial-bg flex flex-col px-8 py-6 animate-fade-in">
           <div className="flex items-center justify-between mb-12">
             <Link to="/" onClick={close} className="font-serif text-2xl text-imperial-gold tracking-wide">
               Librarium

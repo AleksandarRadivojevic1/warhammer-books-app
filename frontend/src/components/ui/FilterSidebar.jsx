@@ -7,6 +7,23 @@ const ERAS = [
   'Old World',
 ];
 
+function Select({ value, onChange, children }) {
+  return (
+    <div className="relative">
+      <select
+        className="input appearance-none pr-8 cursor-pointer font-serif text-imperial-gold"
+        value={value}
+        onChange={onChange}
+      >
+        {children}
+      </select>
+      <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-imperial-muted text-xs">
+        ▾
+      </span>
+    </div>
+  );
+}
+
 export default function FilterSidebar({ filters, onChange }) {
   const handle = (key) => (e) => onChange({ ...filters, [key]: e.target.value, page: 1 });
 
@@ -24,21 +41,21 @@ export default function FilterSidebar({ filters, onChange }) {
 
       <div>
         <label className="label block mb-1">Era</label>
-        <select className="input" value={filters.era ?? ''} onChange={handle('era')}>
+        <Select value={filters.era ?? ''} onChange={handle('era')}>
           <option value="">All eras</option>
           {ERAS.map((era) => (
             <option key={era} value={era}>{era}</option>
           ))}
-        </select>
+        </Select>
       </div>
 
       <div>
         <label className="label block mb-1">Sort by</label>
-        <select className="input" value={filters.sort ?? ''} onChange={handle('sort')}>
+        <Select value={filters.sort ?? ''} onChange={handle('sort')}>
           <option value="">Order in series</option>
           <option value="title">Title</option>
           <option value="pages">Pages</option>
-        </select>
+        </Select>
       </div>
 
       <button className="btn-outline text-sm mt-2" onClick={() => onChange({ page: 1 })}>

@@ -18,6 +18,7 @@ import {
 import { CSS } from '@dnd-kit/utilities';
 import client from '../api/client';
 import Spinner from '../components/ui/Spinner';
+import EmptyState from '../components/ui/EmptyState';
 
 function useFeaturedAdmin() {
   return useQuery({
@@ -230,7 +231,7 @@ export default function Admin() {
         {isLoading ? (
           <Spinner />
         ) : featured.length === 0 ? (
-          <p className="text-imperial-muted">No featured books yet.</p>
+          <EmptyState icon="✦" title="No featured books yet" message="Add a book slug above to feature it on the homepage." />
         ) : (
           <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
             <SortableContext
