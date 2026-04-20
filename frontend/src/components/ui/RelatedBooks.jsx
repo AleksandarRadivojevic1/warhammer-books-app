@@ -8,7 +8,7 @@ function RelatedGroup({ title, books }) {
       <p className="label mb-4">{title}</p>
       <div className="flex gap-4">
         {books.slice(0, 6).map((book) => (
-          <div key={book.slug} className="w-30">
+          <div key={book.slug} className="w-40">
             <BookCard book={book} compact />
           </div>
         ))}

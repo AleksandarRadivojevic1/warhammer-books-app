@@ -3,6 +3,7 @@ import { useBook, useRelatedBooks } from '../hooks/useBooks';
 import BookCard from '../components/ui/BookCard';
 import RelatedBooks from '../components/ui/RelatedBooks';
 import Spinner from '../components/ui/Spinner';
+import BackButton from '../components/ui/BackButton';
 
 // The API returns author/series/primarchs as { name, url } — extract the slug from the URL end.
 const slugFrom = (url) => url?.split('/').at(-1);
@@ -17,6 +18,7 @@ export default function BookDetail() {
 
   return (
     <div className="max-w-4xl mx-auto">
+      <BackButton />
       <div className="flex flex-col md:flex-row gap-8 mb-10">
         <div className="w-40 md:w-56 shrink-0">
           {book.coverImage ? (
