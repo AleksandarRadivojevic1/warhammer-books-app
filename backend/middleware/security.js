@@ -5,6 +5,7 @@ const { sanitize } = require('express-mongo-sanitize');
 const env = require('../config/env');
 
 const isTest = process.env.NODE_ENV === 'test';
+const isDev  = process.env.NODE_ENV === 'development';
 
 // In test mode, replace limiters with a no-op so tests never hit 429.
 // Rate limiting is a production concern — testing it would require resetting
@@ -15,19 +16,19 @@ const globalLimiter = isTest
   ? noOp
   : rateLimit({
       windowMs: 15 * 60 * 1000,
-      max: 100,
+      max: isDev ? 1000 : 300,
       standardHeaders: true,
       legacyHeaders: false,
       message: { error: 'Too many requests, please try again later.' },
     });
 
 // Stricter rate limiter for auth routes to slow down brute force attempts.
-// 10 requests per IP per 15 minutes.
+// Relaxed in development so repeated logins during testing don't hit the limit.
 const authLimiter = isTest
   ? noOp
   : rateLimit({
       windowMs: 15 * 60 * 1000,
-      max: 10,
+      max: isDev ? 100 : 10,
       standardHeaders: true,
       legacyHeaders: false,
       message: { error: 'Too many auth attempts, please try again later.' },

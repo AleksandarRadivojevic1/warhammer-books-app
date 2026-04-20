@@ -2,6 +2,7 @@ const express = require('express');
 const { body } = require('express-validator');
 const validate = require('../middleware/validate');
 const FeaturedBook = require('../models/FeaturedBook');
+const { proxy } = require('../utils/proxy');
 
 const router = express.Router();
 
@@ -16,8 +17,17 @@ router.post(
   async (req, res, next) => {
     try {
       const { bookSlug, order = 0 } = req.body;
+
+      // Verify the slug exists in the Warhammer API before saving.
+      try {
+        await proxy(`/api/v1/books/${bookSlug}`);
+      } catch {
+        return res.status(404).json({ error: `No book found with slug "${bookSlug}"` });
+      }
+
       const existing = await FeaturedBook.findOne({ bookSlug });
-      if (existing) return res.status(409).json({ error: 'Book already featured' });
+      if (existing) return res.status(409).json({ error: 'Book is already featured' });
+
       const featured = await FeaturedBook.create({ bookSlug, addedBy: req.user.id, order });
       res.status(201).json(featured);
     } catch (err) {
@@ -26,19 +36,21 @@ router.post(
   }
 );
 
-// PATCH /api/admin/featured/:id — update display order of a featured book.
-router.patch(
-  '/featured/:id',
-  [body('order').isInt({ min: 0 }), validate],
+// PUT /api/admin/featured/reorder — set the full order in one shot.
+// Accepts an array of IDs in the desired display order and assigns each
+// an order value matching its index, avoiding partial-update race conditions.
+router.put(
+  '/featured/reorder',
+  [body('ids').isArray({ min: 1 }), validate],
   async (req, res, next) => {
     try {
-      const featured = await FeaturedBook.findByIdAndUpdate(
-        req.params.id,
-        { order: req.body.order },
-        { new: true }
+      const { ids } = req.body;
+      await Promise.all(
+        ids.map((id, index) =>
+          FeaturedBook.findByIdAndUpdate(id, { order: index })
+        )
       );
-      if (!featured) return res.status(404).json({ error: 'Featured book not found' });
-      res.json(featured);
+      res.json({ message: 'Order updated' });
     } catch (err) {
       next(err);
     }

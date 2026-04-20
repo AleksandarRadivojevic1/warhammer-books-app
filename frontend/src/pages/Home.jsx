@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useFeatured } from '../hooks/useFeatured';
-import BookCard from '../components/ui/BookCard';
+import FeaturedCarousel from '../components/ui/FeaturedCarousel';
 import Spinner from '../components/ui/Spinner';
 
 function HeroBanner() {
@@ -22,28 +22,13 @@ function HeroBanner() {
   );
 }
 
-function FeaturedStrip({ books }) {
-  if (!books.length) return null;
-
-  return (
-    <section>
-      <h2 className="text-2xl mb-6">Featured</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-        {books.map((book) => (
-          <BookCard key={book.slug} book={book} />
-        ))}
-      </div>
-    </section>
-  );
-}
-
 export default function Home() {
   const { data: featured = [], isLoading } = useFeatured();
 
   return (
     <div>
       <HeroBanner />
-      {isLoading ? <Spinner /> : <FeaturedStrip books={featured} />}
+      {isLoading ? <Spinner /> : <FeaturedCarousel books={featured} />}
     </div>
   );
 }
