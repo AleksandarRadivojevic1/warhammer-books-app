@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://librarium40k.com/sitemap.xml
