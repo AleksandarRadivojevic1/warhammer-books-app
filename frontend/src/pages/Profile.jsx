@@ -116,16 +116,23 @@ function ReadingListSection() {
   );
 }
 
+const RANK = {
+  admin: 'Commissar of the Imperium',
+  user:  'Soldier of the Imperium',
+};
+
 export default function Profile() {
   const { user } = useAuth();
 
   return (
     <div className="max-w-2xl mx-auto animate-fade-in">
-      <p className="label mb-2">Soldier of the Imperium</p>
+      <p className="label mb-2">{RANK[user?.role] ?? 'Soldier of the Imperium'}</p>
       <h1 className="text-3xl mb-2">Profile</h1>
       <div className="flex items-center gap-2 mb-10 pb-6 border-b border-imperial-border">
         <span className="text-imperial-gold/40 text-xs">✦</span>
         <p className="text-imperial-gold/70 text-sm font-serif tracking-wide">{user?.email}</p>
+        <span className="text-imperial-gold/40 text-xs">✦</span>
+        <span className="text-xs font-serif tracking-widest uppercase text-imperial-muted/60">{user?.role}</span>
       </div>
       <FavoritesSection />
       <ReadingListSection />

@@ -153,6 +153,22 @@ export default function BookDetail() {
             </p>
           )}
 
+          {book.factions?.length > 0 && (
+            <div className="mb-4">
+              <h3 className="label mb-2">Factions</h3>
+              <div className="flex flex-wrap gap-2">
+                {book.factions.map((f) => (
+                  <span
+                    key={f.slug}
+                    className="border border-imperial-border text-imperial-muted text-xs px-3 py-1 rounded-full"
+                  >
+                    {f.name}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
           {book.primarchs?.length > 0 && (
             <div>
               <h3 className="label mb-2">Primarchs</h3>
