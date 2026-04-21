@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import AuthLayout from '../components/layout/AuthLayout';
+import PasswordInput from '../components/ui/PasswordInput';
 
 export default function Register() {
   const { register } = useAuth();
@@ -53,11 +54,11 @@ export default function Register() {
         </div>
         <div>
           <label className="label block mb-1">Password</label>
-          <input className="input" type="password" required value={form.password} onChange={handle('password')} />
+          <PasswordInput required value={form.password} onChange={handle('password')} />
         </div>
         <div>
           <label className="label block mb-1">Confirm Password</label>
-          <input className="input" type="password" required value={form.confirm} onChange={handle('confirm')} />
+          <PasswordInput required value={form.confirm} onChange={handle('confirm')} />
         </div>
         {error && <p className="text-red-400 text-sm">{error}</p>}
         <button className="btn-gold mt-2" type="submit" disabled={loading}>

@@ -133,20 +133,20 @@ export default function Navbar() {
             )}
           </nav>
 
-          <div className="mt-auto flex gap-6 text-sm">
+          <div className="mt-auto flex items-center gap-6 text-sm">
             {user ? (
               <button
                 onClick={() => { logout(); close(); }}
-                className="text-imperial-muted hover:text-imperial-gold transition-colors"
+                className="font-serif text-sm tracking-wide text-imperial-muted hover:text-imperial-gold transition-colors"
               >
                 Logout
               </button>
             ) : (
               <>
-                <Link to="/login" onClick={close} className="text-imperial-muted hover:text-imperial-gold transition-colors">
+                <Link to="/login" onClick={close} className="font-serif text-sm tracking-wide text-imperial-muted hover:text-imperial-gold transition-colors">
                   Login
                 </Link>
-                <Link to="/register" onClick={close} className="btn-gold px-4 py-1.5">
+                <Link to="/register" onClick={close} className="font-serif text-sm tracking-wide border border-imperial-gold text-imperial-gold px-4 py-1.5 hover:bg-imperial-gold hover:text-imperial-bg transition-all">
                   Register
                 </Link>
               </>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import AuthLayout from '../components/layout/AuthLayout';
+import PasswordInput from '../components/ui/PasswordInput';
 
 export default function Login() {
   const { login } = useAuth();
@@ -38,7 +39,7 @@ export default function Login() {
         </div>
         <div>
           <label className="label block mb-1">Password</label>
-          <input className="input" type="password" required value={form.password} onChange={handle('password')} />
+          <PasswordInput required value={form.password} onChange={handle('password')} />
           <div className="text-right mt-1">
             <Link to="/forgot-password" className="text-xs text-imperial-muted hover:text-imperial-gold transition-colors">
               Forgot password?
