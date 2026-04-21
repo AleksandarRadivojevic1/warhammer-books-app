@@ -4,25 +4,21 @@ const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 const User = require('../models/User');
 const { hashPassword, verifyPassword } = require('../utils/crypto');
+const { sendVerificationEmail, sendPasswordResetEmail } = require('../utils/email');
 const validate = require('../middleware/validate');
 const env = require('../config/env');
 
 const router = express.Router();
 
-// Cookie options shared across login/logout.
-// httpOnly prevents JavaScript from reading the cookie (XSS protection).
-// secure is true in production so cookies are only sent over HTTPS.
 const COOKIE_OPTS = {
   httpOnly: true,
   secure: env.nodeEnv === 'production',
-  // cross-domain (Vercel frontend ↔ Railway backend) requires 'none' + secure
   sameSite: env.nodeEnv === 'production' ? 'none' : 'strict',
 };
 
 const generateTokens = (user) => {
   const payload = { id: user._id.toString(), email: user.email, role: user.role };
   const accessToken = jwt.sign(payload, env.jwtAccessSecret, { expiresIn: '15m' });
-  // Refresh token carries only the user id — the full payload is re-fetched on refresh.
   const refreshToken = jwt.sign({ id: user._id.toString() }, env.jwtRefreshSecret, { expiresIn: '7d' });
   return { accessToken, refreshToken };
 };
@@ -41,7 +37,16 @@ router.post(
       const existing = await User.findOne({ email });
       if (existing) return res.status(409).json({ error: 'Email already registered' });
       const { hash, salt } = await hashPassword(password);
-      const user = await User.create({ email, passwordHash: hash, passwordSalt: salt });
+      const verificationToken = crypto.randomBytes(32).toString('hex');
+      const verificationExpiry = new Date(Date.now() + 24 * 60 * 60 * 1000);
+      const user = await User.create({
+        email,
+        passwordHash: hash,
+        passwordSalt: salt,
+        verificationToken,
+        verificationExpiry,
+      });
+      await sendVerificationEmail(email, verificationToken);
       res.status(201).json({ id: user._id, email: user.email, role: user.role });
     } catch (err) {
       next(err);
@@ -62,7 +67,6 @@ router.post(
       const { email, password } = req.body;
       const user = await User.findOne({ email });
       const valid = user && (await verifyPassword(password, user.passwordHash, user.passwordSalt));
-      // Return the same error for wrong email or wrong password to avoid user enumeration.
       if (!valid) return res.status(401).json({ error: 'Invalid credentials' });
 
       const { accessToken, refreshToken } = generateTokens(user);
@@ -70,11 +74,92 @@ router.post(
       const maxAge = 7 * 24 * 60 * 60 * 1000;
 
       res.cookie('refreshToken', refreshToken, { ...COOKIE_OPTS, maxAge });
-      // csrfToken cookie kept for same-domain dev; also returned in body so
-      // cross-domain frontends can store it in localStorage.
       res.cookie('csrfToken', csrfToken, { ...COOKIE_OPTS, httpOnly: false, maxAge });
 
-      res.json({ accessToken, csrfToken, user: { id: user._id, email: user.email, role: user.role } });
+      res.json({
+        accessToken,
+        csrfToken,
+        user: { id: user._id, email: user.email, role: user.role, isVerified: user.isVerified },
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
+);
+
+// GET /api/auth/verify/:token
+router.get('/verify/:token', async (req, res, next) => {
+  try {
+    const user = await User.findOne({ verificationToken: req.params.token });
+    if (!user) return res.status(400).json({ error: 'Invalid or expired verification link.' });
+    if (!user.isVerified) {
+      if (user.verificationExpiry < new Date()) {
+        return res.status(400).json({ error: 'Invalid or expired verification link.' });
+      }
+      user.isVerified = true;
+      await user.save();
+    }
+    res.json({ message: 'Email verified successfully.' });
+  } catch (err) {
+    next(err);
+  }
+});
+
+// POST /api/auth/resend-verification
+router.post('/resend-verification', async (req, res, next) => {
+  try {
+    const { email } = req.body;
+    const user = await User.findOne({ email });
+    if (!user || user.isVerified) return res.json({ message: 'If applicable, a new verification email has been sent.' });
+    const verificationToken = crypto.randomBytes(32).toString('hex');
+    user.verificationToken = verificationToken;
+    user.verificationExpiry = new Date(Date.now() + 24 * 60 * 60 * 1000);
+    await user.save();
+    await sendVerificationEmail(email, verificationToken);
+    res.json({ message: 'If applicable, a new verification email has been sent.' });
+  } catch (err) {
+    next(err);
+  }
+});
+
+// POST /api/auth/forgot-password
+router.post('/forgot-password', async (req, res, next) => {
+  try {
+    const { email } = req.body;
+    const user = await User.findOne({ email });
+    // Always return success to avoid user enumeration.
+    if (user) {
+      const resetToken = crypto.randomBytes(32).toString('hex');
+      user.resetToken = resetToken;
+      user.resetExpiry = new Date(Date.now() + 60 * 60 * 1000);
+      await user.save();
+      await sendPasswordResetEmail(email, resetToken);
+    }
+    res.json({ message: 'If an account exists, a reset link has been sent.' });
+  } catch (err) {
+    next(err);
+  }
+});
+
+// POST /api/auth/reset-password
+router.post(
+  '/reset-password',
+  [body('password').isLength({ min: 8 }).trim(), validate],
+  async (req, res, next) => {
+    try {
+      const { token, password } = req.body;
+      const user = await User.findOne({
+        resetToken: token,
+        resetExpiry: { $gt: new Date() },
+      });
+      if (!user) return res.status(400).json({ error: 'Invalid or expired reset link.' });
+      const { hash, salt } = await hashPassword(password);
+      user.passwordHash = hash;
+      user.passwordSalt = salt;
+      user.resetToken = undefined;
+      user.resetExpiry = undefined;
+      await user.save();
+      res.json({ message: 'Password reset successfully. You can now log in.' });
     } catch (err) {
       next(err);
     }
@@ -82,8 +167,6 @@ router.post(
 );
 
 // POST /api/auth/refresh
-// Validates both the httpOnly refresh token and the CSRF token sent as a header.
-// This double-submit pattern ensures a CSRF attack can't silently refresh tokens.
 router.post('/refresh', async (req, res, next) => {
   try {
     const { refreshToken, csrfToken: cookieCsrf } = req.cookies;

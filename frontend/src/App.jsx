@@ -1,6 +1,7 @@
 import { Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import VerificationBanner from './components/ui/VerificationBanner';
 import RequireAuth from './components/guards/RequireAuth';
 import RequireAdmin from './components/guards/RequireAdmin';
 
@@ -15,10 +16,12 @@ import Primarchs from './pages/Primarchs';
 import PrimarchDetail from './pages/PrimarchDetail';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
+import VerifyEmail from './pages/VerifyEmail';
 import Profile from './pages/Profile';
 import Admin from './pages/Admin';
 
-// Auth pages need full-width layout — no max-w or padding constraints.
 function AuthWrapper() {
   return <main className="flex-1 flex flex-col"><Outlet /></main>;
 }
@@ -35,10 +38,14 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
+      <VerificationBanner />
       <Routes>
         <Route element={<AuthWrapper />}>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
+          <Route path="/verify/:token" element={<VerifyEmail />} />
         </Route>
         <Route element={<ContentWrapper />}>
           <Route path="/" element={<Home />} />

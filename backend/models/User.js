@@ -13,6 +13,11 @@ const userSchema = new mongoose.Schema({
   // Salt is stored separately so we can reproduce the bcrypt input on login.
   passwordSalt: { type: String, required: true },
   role: { type: String, enum: ['user', 'admin'], default: 'user' },
+  isVerified: { type: Boolean, default: false },
+  verificationToken: { type: String },
+  verificationExpiry: { type: Date },
+  resetToken: { type: String },
+  resetExpiry: { type: Date },
   createdAt: { type: Date, default: Date.now },
 });
 

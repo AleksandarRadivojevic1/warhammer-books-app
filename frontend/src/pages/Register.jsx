@@ -1,15 +1,14 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import AuthLayout from '../components/layout/AuthLayout';
 
 export default function Register() {
-  const { register, login } = useAuth();
-  const navigate = useNavigate();
-
+  const { register } = useAuth();
   const [form, setForm] = useState({ email: '', password: '', confirm: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [done, setDone] = useState(false);
 
   const handle = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
 
@@ -21,14 +20,29 @@ export default function Register() {
     setLoading(true);
     try {
       await register(form.email, form.password);
-      await login(form.email, form.password);
-      navigate('/');
+      setDone(true);
     } catch (err) {
       setError(err.response?.data?.error ?? 'Registration failed');
     } finally {
       setLoading(false);
     }
   };
+
+  if (done) {
+    return (
+      <AuthLayout title="Check your inbox" eyebrow="Almost there" flip>
+        <div className="flex flex-col gap-4 animate-fade-in">
+          <p className="text-imperial-light/80 text-sm leading-relaxed">
+            A verification link has been sent to{' '}
+            <span className="text-imperial-gold font-serif">{form.email}</span>.
+            Click it to activate your account and enter the Librarium.
+          </p>
+          <p className="text-imperial-muted text-xs">Didn't receive it? Check your spam folder.</p>
+          <Link to="/login" className="text-imperial-gold hover:underline text-sm mt-2">Back to Login</Link>
+        </div>
+      </AuthLayout>
+    );
+  }
 
   return (
     <AuthLayout title="Create Account" eyebrow="Join the Librarium" flip>

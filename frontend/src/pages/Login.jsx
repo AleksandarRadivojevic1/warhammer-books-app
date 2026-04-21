@@ -39,7 +39,15 @@ export default function Login() {
         <div>
           <label className="label block mb-1">Password</label>
           <input className="input" type="password" required value={form.password} onChange={handle('password')} />
+          <div className="text-right mt-1">
+            <Link to="/forgot-password" className="text-xs text-imperial-muted hover:text-imperial-gold transition-colors">
+              Forgot password?
+            </Link>
+          </div>
         </div>
+        {location.state?.message && (
+          <p className="text-imperial-gold/80 text-sm">{location.state.message}</p>
+        )}
         {error && <p className="text-red-400 text-sm">{error}</p>}
         <button className="btn-gold mt-2" type="submit" disabled={loading}>
           {loading ? 'Entering...' : 'Enter the Librarium'}

@@ -61,7 +61,7 @@ export function AuthProvider({ children }) {
   const login = async (email, password) => {
     const { data } = await client.post('/api/auth/login', { email, password });
     setAccessToken(data.accessToken);
-    setUser(data.user);
+    setUser(data.user); // data.user includes isVerified from login response
     if (data.csrfToken) localStorage.setItem('csrfToken', data.csrfToken);
     return data.user;
   };
