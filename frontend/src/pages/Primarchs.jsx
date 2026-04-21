@@ -145,7 +145,7 @@ export default function Primarchs() {
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
         <h1 className="text-3xl">Primarchs</h1>
         <div className="flex gap-2">
           {ALIGNMENTS.map((a) => (
