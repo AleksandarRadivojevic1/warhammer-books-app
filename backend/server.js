@@ -10,6 +10,7 @@ const adminOnly = require('./middleware/adminOnly');
 
 const app = express();
 
+app.set('trust proxy', 1);
 applySecurity(app);
 app.use(cookieParser());
 app.use(express.json({ limit: '10kb' }));
