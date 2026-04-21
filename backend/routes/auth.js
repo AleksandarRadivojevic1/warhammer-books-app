@@ -17,7 +17,7 @@ const COOKIE_OPTS = {
 };
 
 const generateTokens = (user) => {
-  const payload = { id: user._id.toString(), email: user.email, role: user.role };
+  const payload = { id: user._id.toString(), email: user.email, role: user.role, isVerified: user.isVerified };
   const accessToken = jwt.sign(payload, env.jwtAccessSecret, { expiresIn: '15m' });
   const refreshToken = jwt.sign({ id: user._id.toString() }, env.jwtRefreshSecret, { expiresIn: '7d' });
   return { accessToken, refreshToken };
