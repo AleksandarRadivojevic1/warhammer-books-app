@@ -30,10 +30,9 @@ client.interceptors.response.use(
     if (error.response?.status === 401 && !original._retry) {
       original._retry = true;
       try {
-        const csrfToken = document.cookie
-          .split('; ')
-          .find((c) => c.startsWith('csrfToken='))
-          ?.split('=')[1];
+        const csrfToken =
+          localStorage.getItem('csrfToken') ||
+          document.cookie.split('; ').find((c) => c.startsWith('csrfToken='))?.split('=')[1];
 
         const { data } = await axios.post(
           `${import.meta.env.VITE_API_URL || 'http://localhost:4000'}/api/auth/refresh`,

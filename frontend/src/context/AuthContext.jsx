@@ -15,10 +15,10 @@ function parseToken(token) {
 }
 
 function getCsrfToken() {
-  return document.cookie
-    .split('; ')
-    .find((c) => c.startsWith('csrfToken='))
-    ?.split('=')[1];
+  return (
+    localStorage.getItem('csrfToken') ||
+    document.cookie.split('; ').find((c) => c.startsWith('csrfToken='))?.split('=')[1]
+  );
 }
 
 export function AuthProvider({ children }) {
@@ -62,6 +62,7 @@ export function AuthProvider({ children }) {
     const { data } = await client.post('/api/auth/login', { email, password });
     setAccessToken(data.accessToken);
     setUser(data.user);
+    if (data.csrfToken) localStorage.setItem('csrfToken', data.csrfToken);
     return data.user;
   };
 
@@ -69,6 +70,7 @@ export function AuthProvider({ children }) {
     await client.post('/api/auth/logout');
     setAccessToken(null);
     setUser(null);
+    localStorage.removeItem('csrfToken');
   };
 
   return (

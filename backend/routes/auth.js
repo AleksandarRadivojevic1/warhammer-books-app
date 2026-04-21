@@ -66,18 +66,15 @@ router.post(
       if (!valid) return res.status(401).json({ error: 'Invalid credentials' });
 
       const { accessToken, refreshToken } = generateTokens(user);
+      const csrfToken = crypto.randomBytes(32).toString('hex');
       const maxAge = 7 * 24 * 60 * 60 * 1000;
 
       res.cookie('refreshToken', refreshToken, { ...COOKIE_OPTS, maxAge });
-      // csrfToken is readable by JS (httpOnly: false) so the frontend can send it
-      // as a header on refresh requests — double-submit CSRF pattern.
-      res.cookie('csrfToken', crypto.randomBytes(32).toString('hex'), {
-        ...COOKIE_OPTS,
-        httpOnly: false,
-        maxAge,
-      });
+      // csrfToken cookie kept for same-domain dev; also returned in body so
+      // cross-domain frontends can store it in localStorage.
+      res.cookie('csrfToken', csrfToken, { ...COOKIE_OPTS, httpOnly: false, maxAge });
 
-      res.json({ accessToken, user: { id: user._id, email: user.email, role: user.role } });
+      res.json({ accessToken, csrfToken, user: { id: user._id, email: user.email, role: user.role } });
     } catch (err) {
       next(err);
     }
