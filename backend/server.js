@@ -48,7 +48,7 @@ app.use((err, req, res, next) => {
 if (require.main === module) {
   connectDB()
     .then(() => {
-      app.listen(env.port, () => console.log(`Backend running on port ${env.port}`));
+      app.listen(env.port, '0.0.0.0', () => console.log(`Backend running on port ${env.port}`));
     })
     .catch((err) => {
       console.error('Failed to connect to MongoDB:', err.message);
