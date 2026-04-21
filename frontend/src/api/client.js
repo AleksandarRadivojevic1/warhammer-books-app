@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // All requests go through the backend — never the Warhammer API directly.
 const client = axios.create({
-  baseURL: 'http://localhost:4000',
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:4000',
   withCredentials: true,
 });
 
@@ -36,7 +36,7 @@ client.interceptors.response.use(
           ?.split('=')[1];
 
         const { data } = await axios.post(
-          'http://localhost:4000/api/auth/refresh',
+          `${import.meta.env.VITE_API_URL || 'http://localhost:4000'}/api/auth/refresh`,
           {},
           { withCredentials: true, headers: { 'x-csrf-token': csrfToken } }
         );

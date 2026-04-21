@@ -15,7 +15,8 @@ const router = express.Router();
 const COOKIE_OPTS = {
   httpOnly: true,
   secure: env.nodeEnv === 'production',
-  sameSite: 'strict',
+  // cross-domain (Vercel frontend ↔ Railway backend) requires 'none' + secure
+  sameSite: env.nodeEnv === 'production' ? 'none' : 'strict',
 };
 
 const generateTokens = (user) => {
