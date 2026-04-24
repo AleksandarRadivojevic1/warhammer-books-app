@@ -21,6 +21,7 @@ import ResetPassword from './pages/ResetPassword';
 import VerifyEmail from './pages/VerifyEmail';
 import Profile from './pages/Profile';
 import Admin from './pages/Admin';
+import NotFound from './pages/NotFound';
 
 function AuthWrapper() {
   return <main className="flex-1 flex flex-col"><Outlet /></main>;
@@ -59,6 +60,7 @@ export default function App() {
           <Route path="/primarchs/:slug" element={<PrimarchDetail />} />
           <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
           <Route path="/admin" element={<RequireAdmin><Admin /></RequireAdmin>} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
       <Footer />
