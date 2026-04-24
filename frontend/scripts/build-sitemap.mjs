@@ -29,7 +29,14 @@ async function fetchAll(path) {
     // API returns `next` as either a full URL or a root-relative path.
     url = json.next ? new URL(json.next, API).toString() : null;
   }
-  return items;
+  // API has duplicate records sharing slugs (e.g. same book across
+  // multiple series). Dedupe by slug so the sitemap lists each URL once.
+  const seen = new Set();
+  return items.filter((i) => {
+    if (!i.slug || seen.has(i.slug)) return false;
+    seen.add(i.slug);
+    return true;
+  });
 }
 
 const entry = (loc, priority, changefreq) =>

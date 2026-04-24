@@ -12,7 +12,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
 
-  // Close overlay on route change.
+  // Close overlay on route change. 
   useEffect(() => { setOpen(false); }, [location.pathname]);
 
   const close = () => setOpen(false);

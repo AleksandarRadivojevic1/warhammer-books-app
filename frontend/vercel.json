@@ -1,3 +1,14 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/profile", "destination": "/index.html" },
+    { "source": "/admin", "destination": "/index.html" },
+    { "source": "/verify/:token", "destination": "/index.html" },
+    { "source": "/reset-password/:token", "destination": "/index.html" },
+    { "source": "/books/:slug", "destination": "/index.html" },
+    { "source": "/authors/:slug", "destination": "/index.html" },
+    { "source": "/series/:slug", "destination": "/index.html" },
+    { "source": "/primarchs/:slug", "destination": "/index.html" }
+  ]
 }

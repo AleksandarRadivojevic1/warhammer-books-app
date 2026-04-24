@@ -271,7 +271,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/outlander-necromunda</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/vulkan-lives</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/catachan-devil</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -281,7 +291,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/cains-last-stand</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/mephiston-blood-of-sanguinius</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/penitent-bequin</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -296,7 +316,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/caves-of-ice</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/overfiend</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/tales-of-heresy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -306,7 +336,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/fabius-bile-manflayer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/fortress-of-ghosts</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/saturnine</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -316,7 +356,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/fulgrim</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/first-and-only</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/war-without-end</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -326,7 +376,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/the-first-heretic</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/the-damnation-of-pythos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/deathfire</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -336,7 +396,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/angels-of-caliban</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/lion-el-jonson-lord-of-the-first</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/shattered-legions</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -346,7 +416,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/old-earth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/daemonbreaker</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/the-devastation-of-baal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -356,7 +436,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/cardinal-crimson</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/traitor-general</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/lorgar-bearer-of-the-word</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -366,12 +456,57 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/crusaders-of-dorn</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/ruinstorm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/ghostmaker</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/claws-of-the-genestealer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/the-greater-good</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/legion</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/corax-lord-of-shadows</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/kinslayer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/black-legion-novel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/path-of-the-outcast</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/the-curse-of-khaine</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -391,7 +526,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/ahriman-sorcerer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/malleus-eisenhorn</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/the-martyrs-tomb</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -401,7 +546,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/outlander-necromunda</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/corax</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/vulkan-lives</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -411,7 +566,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/catachan-devil</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/jaghatai-khan-warhawk-of-chogoris</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/skaven-pestilens</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -421,7 +586,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/cains-last-stand</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/the-eye-of-ezekiel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/mephiston-blood-of-sanguinius</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -431,7 +606,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/penitent-bequin</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/pilgrims-of-fire</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/road-to-redemption</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -446,7 +631,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/the-solar-war</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/junktion</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/caves-of-ice</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -456,7 +651,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/overfiend</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/path-of-the-warrior</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/tales-of-heresy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -466,7 +671,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/predator-prey</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/the-beheading</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/fabius-bile-manflayer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -476,7 +691,52 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/fortress-of-ghosts</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/death-or-glory</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/saturnine</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/pariah-bequin</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/the-greater-good</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/legion</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/corax-lord-of-shadows</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/kinslayer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/black-legion-novel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/path-of-the-outcast</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -491,7 +751,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/manslayer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/fleshworks</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/the-first-heretic</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -501,7 +771,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/the-damnation-of-pythos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/ravenor-rogue</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/deathfire</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -511,7 +791,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/the-rose-in-anger</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/throneworld</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/angels-of-caliban</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -521,7 +811,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/lion-el-jonson-lord-of-the-first</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/the-magos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/shattered-legions</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -531,7 +831,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/the-death-of-antagonis</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/angel-exterminatus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/old-earth</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -541,7 +851,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/daemonbreaker</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/sylvaneth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/the-devastation-of-baal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -551,7 +871,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/sea-of-souls</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/flesh-of-cretacia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/cardinal-crimson</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -561,7 +891,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/traitor-general</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/ahriman-eternal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/lorgar-bearer-of-the-word</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -571,7 +911,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/scars</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/his-last-command</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/crusaders-of-dorn</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -581,12 +931,57 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/ruinstorm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/giantslayer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/ghostmaker</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/path-of-the-renegade</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/the-greater-good</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/legion</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/corax-lord-of-shadows</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/kinslayer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/black-legion-novel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/path-of-the-outcast</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/shadows-of-treachery</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -626,7 +1021,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/the-curse-of-khaine</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/plague-of-the-nurglings</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/ahriman-exile</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -636,7 +1041,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/blackstone-fortress-ascension</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/zombieslayer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/for-the-emperor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -646,7 +1061,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/ahriman-sorcerer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/mephiston-lord-of-death</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/malleus-eisenhorn</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -656,7 +1081,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/the-martyrs-tomb</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/rynns-world</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/elfslayer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -666,7 +1101,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/outlander-necromunda</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/storm-of-damocles</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/corax</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -676,7 +1121,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/vulkan-lives</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/the-rose-at-war</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/the-hand-of-harrow</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -686,7 +1141,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/catachan-devil</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/vampireslayer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/jaghatai-khan-warhawk-of-chogoris</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -696,7 +1161,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/skaven-pestilens</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/black-rift</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/the-purging-of-kadillus</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -706,7 +1181,57 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/cains-last-stand</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/the-eye-of-ezekiel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/the-greater-good</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/legion</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/corax-lord-of-shadows</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/kinslayer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/black-legion-novel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/path-of-the-outcast</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/shadows-of-treachery</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/sword-of-caledor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/pilgrims-of-fire</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -716,7 +1241,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/road-to-redemption</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/the-armour-of-contempt</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/horus-rising</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -731,7 +1266,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/betrayer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/traitor-by-deed</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/the-solar-war</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -741,7 +1286,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/junktion</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/blacktalon-first-mark</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/caves-of-ice</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -751,7 +1306,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/blood-reaver</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/straight-silver</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/overfiend</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -761,7 +1326,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/path-of-the-warrior</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/the-master-of-mankind</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/tales-of-heresy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -771,7 +1346,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/nagash-the-unbroken</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/magnus-the-red-master-of-prospero</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/predator-prey</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -781,7 +1366,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/the-beheading</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/the-gildar-rift</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/fabius-bile-manflayer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -791,7 +1386,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/dark-creed</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/plague-garden</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/fortress-of-ghosts</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -801,7 +1406,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/death-or-glory</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/bane-of-malekith</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/saturnine</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -811,7 +1426,47 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/the-greater-good</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/legion</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/corax-lord-of-shadows</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/kinslayer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/black-legion-novel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/path-of-the-outcast</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/shadows-of-treachery</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/the-crimson-king</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/elfslayer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -821,7 +1476,27 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/malleus-eisenhorn</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/the-wolftime</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/for-the-emperor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/the-greater-good</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/ahriman-exile</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -831,7 +1506,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://librarium40k.com/books/malekith</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://librarium40k.com/books/the-last-wall</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://librarium40k.com/books/blades-of-damocles</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
