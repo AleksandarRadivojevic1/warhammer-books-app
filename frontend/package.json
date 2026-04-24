@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "postinstall": "playwright install --with-deps chromium",
+    "postinstall": "node scripts/unless-vercel.mjs playwright install chromium",
     "prebuild": "node scripts/build-sitemap.mjs",
     "build": "vite build",
-    "postbuild": "node scripts/prerender.mjs",
+    "postbuild": "node scripts/unless-vercel.mjs node scripts/prerender.mjs",
     "build:sitemap": "node scripts/build-sitemap.mjs",
     "prerender": "node scripts/prerender.mjs",
     "lint": "eslint .",
