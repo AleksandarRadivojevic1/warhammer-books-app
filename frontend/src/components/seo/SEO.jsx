@@ -14,10 +14,15 @@ export default function SEO({
   image = DEFAULT_IMAGE,
   type = 'website',
   noindex = false,
+  jsonLd,
 }) {
   const { pathname } = useLocation();
   const url = canonical ?? `${SITE_URL}${pathname}`;
   const fullTitle = title ? `${title} — ${SITE_NAME}` : `${SITE_NAME} — Warhammer Book Library`;
+
+  // Escape the closing-tag sequence so a stray `</script>` inside a JSON
+  // string value can never break out of the script block.
+  const ldJson = jsonLd && JSON.stringify(jsonLd).replace(/</g, '\\u003c');
 
   return (
     <Helmet>
@@ -38,6 +43,8 @@ export default function SEO({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+
+      {ldJson && <script type="application/ld+json">{ldJson}</script>}
     </Helmet>
   );
 }

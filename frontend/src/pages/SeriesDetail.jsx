@@ -22,9 +22,29 @@ export default function SeriesDetail() {
       books.length ? `, ${books.length} books.` : '.'
     }`;
 
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BookSeries',
+      name: series.name,
+      url: `https://librarium40k.com/series/${slug}`,
+      publisher: { '@type': 'Organization', name: 'Black Library' },
+      ...(series.description && { description: series.description }),
+      ...(books.length && { numberOfItems: books.length }),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Series', item: 'https://librarium40k.com/series' },
+        { '@type': 'ListItem', position: 2, name: series.name },
+      ],
+    },
+  ];
+
   return (
     <div className="max-w-3xl mx-auto animate-fade-in">
-      <SEO title={series.name} description={seoDescription} type="article" />
+      <SEO title={series.name} description={seoDescription} type="article" jsonLd={jsonLd} />
       <BackButton />
 
       <div className="mb-10 pb-8 border-b border-imperial-border">

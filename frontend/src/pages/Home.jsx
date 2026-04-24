@@ -46,12 +46,22 @@ function HeroBanner() {
   );
 }
 
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Librarium',
+  alternateName: 'Librarium — Warhammer Book Library',
+  url: 'https://librarium40k.com',
+  description:
+    'A reference catalog of Warhammer 40,000 and Horus Heresy novels, series, authors, and Primarchs.',
+};
+
 export default function Home() {
   const { data: featured = [], isLoading } = useFeatured();
 
   return (
     <div>
-      <SEO />
+      <SEO jsonLd={websiteJsonLd} />
       <HeroBanner />
       {isLoading ? <Spinner /> : <FeaturedCarousel books={featured} />}
     </div>

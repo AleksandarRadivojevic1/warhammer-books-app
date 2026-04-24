@@ -97,9 +97,39 @@ export default function BookDetail() {
       book.series?.name ? `, part of the ${book.series.name} series` : ''
     } — a Warhammer novel from Black Library.`;
 
+  const bookUrl = `https://librarium40k.com/books/${slug}`;
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Book',
+      name: book.title,
+      url: bookUrl,
+      inLanguage: 'en',
+      bookFormat: 'https://schema.org/Paperback',
+      publisher: { '@type': 'Organization', name: 'Black Library' },
+      ...(book.author?.name && {
+        author: { '@type': 'Person', name: book.author.name },
+      }),
+      ...(book.coverImage && { image: book.coverImage }),
+      ...(book.series?.name && {
+        isPartOf: { '@type': 'BookSeries', name: book.series.name },
+      }),
+      ...(book.pages && { numberOfPages: book.pages }),
+      ...(book.description && { description: book.description }),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Books', item: 'https://librarium40k.com/books' },
+        { '@type': 'ListItem', position: 2, name: book.title },
+      ],
+    },
+  ];
+
   return (
     <div className="max-w-4xl mx-auto animate-fade-in">
-      <SEO title={seoTitle} description={seoDescription} type="article" />
+      <SEO title={seoTitle} description={seoDescription} type="article" jsonLd={jsonLd} />
       <BackButton />
 
       <div className="flex flex-col md:flex-row gap-8 mb-10">
