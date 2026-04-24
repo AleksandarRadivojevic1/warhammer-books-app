@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuthors } from '../hooks/useAuthors';
 import Spinner from '../components/ui/Spinner';
+import SEO from '../components/seo/SEO';
 
 export default function Authors() {
   const [page, setPage] = useState(1);
@@ -13,6 +14,10 @@ export default function Authors() {
 
   return (
     <div>
+      <SEO
+        title="Authors"
+        description="Black Library authors who shaped the Warhammer universe — Dan Abnett, Graham McNeill, Aaron Dembski-Bowden, Guy Haley, James Swallow, and more."
+      />
       <h1 className="text-3xl mb-8 animate-fade-in">Authors</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {authors.map((author, i) => (

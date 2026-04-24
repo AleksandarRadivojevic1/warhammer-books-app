@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import AuthLayout from '../components/layout/AuthLayout';
 import PasswordInput from '../components/ui/PasswordInput';
+import SEO from '../components/seo/SEO';
 
 export default function Login() {
   const { login } = useAuth();
@@ -32,6 +33,7 @@ export default function Login() {
 
   return (
     <AuthLayout title="Login" eyebrow="Welcome back">
+      <SEO title="Sign In" noindex />
       <form onSubmit={submit} className="flex flex-col gap-4">
         <div>
           <label className="label block mb-1">Email</label>

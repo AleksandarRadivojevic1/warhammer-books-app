@@ -8,6 +8,10 @@ import { useAuth } from '../hooks/useAuth';
 import RelatedBooks from '../components/ui/RelatedBooks';
 import Spinner from '../components/ui/Spinner';
 import BackButton from '../components/ui/BackButton';
+import SEO from '../components/seo/SEO';
+
+const truncate = (s, n = 155) =>
+  !s ? null : s.length > n ? s.slice(0, n).trim() + '…' : s;
 
 const slugFrom = (url) => url?.split('/').at(-1);
 
@@ -83,11 +87,19 @@ export default function BookDetail() {
   const { data: book, isLoading, isError } = useBook(slug);
   const { data: related } = useRelatedBooks(slug);
 
-  if (isLoading) return <Spinner />;
-  if (isError) return <p className="text-imperial-muted">Book not found.</p>;
+  if (isLoading) return <><SEO /><Spinner /></>;
+  if (isError) return <><SEO title="Book not found" noindex /><p className="text-imperial-muted">Book not found.</p></>;
+
+  const seoTitle = `${book.title}${book.author?.name ? ` by ${book.author.name}` : ''}`;
+  const seoDescription =
+    truncate(book.description) ??
+    `${book.title}${book.author?.name ? ` by ${book.author.name}` : ''}${
+      book.series?.name ? `, part of the ${book.series.name} series` : ''
+    } — a Warhammer novel from Black Library.`;
 
   return (
     <div className="max-w-4xl mx-auto animate-fade-in">
+      <SEO title={seoTitle} description={seoDescription} type="article" />
       <BackButton />
 
       <div className="flex flex-col md:flex-row gap-8 mb-10">

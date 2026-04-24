@@ -2,20 +2,27 @@ import { useParams, Link } from 'react-router-dom';
 import { useAuthor } from '../hooks/useAuthors';
 import Spinner from '../components/ui/Spinner';
 import BackButton from '../components/ui/BackButton';
+import SEO from '../components/seo/SEO';
 
 const slugFrom = (url) => url?.split('/').at(-1);
+const truncate = (s, n = 155) =>
+  !s ? null : s.length > n ? s.slice(0, n).trim() + '…' : s;
 
 export default function AuthorDetail() {
   const { slug } = useParams();
   const { data: author, isLoading, isError } = useAuthor(slug);
 
-  if (isLoading) return <Spinner />;
-  if (isError) return <p className="text-imperial-muted">Author not found.</p>;
+  if (isLoading) return <><SEO /><Spinner /></>;
+  if (isError) return <><SEO title="Author not found" noindex /><p className="text-imperial-muted">Author not found.</p></>;
 
   const books = author?.books ?? [];
+  const seoDescription =
+    truncate(author.bio) ??
+    `${author.name} — Warhammer author at Black Library${books.length ? `. Browse ${books.length} books.` : '.'}`;
 
   return (
     <div className="max-w-3xl mx-auto animate-fade-in">
+      <SEO title={author.name} description={seoDescription} type="profile" />
       <BackButton />
 
       <div className="flex flex-col sm:flex-row gap-6 items-start mb-10 pb-8 border-b border-imperial-border">

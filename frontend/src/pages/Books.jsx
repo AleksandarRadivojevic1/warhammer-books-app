@@ -4,6 +4,7 @@ import BookCard from '../components/ui/BookCard';
 import FilterSidebar from '../components/ui/FilterSidebar';
 import Spinner from '../components/ui/Spinner';
 import EmptyState from '../components/ui/EmptyState';
+import SEO from '../components/seo/SEO';
 
 export default function Books() {
   const [filters, setFilters] = useState({ page: 1 });
@@ -15,6 +16,10 @@ export default function Books() {
 
   return (
     <div>
+      <SEO
+        title="Books"
+        description="Complete catalog of Warhammer 40,000 and Horus Heresy novels — browse hundreds of books by author, series, faction, and setting."
+      />
       <h1 className="text-3xl mb-8">Books</h1>
       <div className="flex flex-col md:flex-row gap-8">
         <FilterSidebar filters={filters} onChange={setFilters} />

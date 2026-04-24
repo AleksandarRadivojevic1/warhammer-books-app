@@ -2,20 +2,29 @@ import { useParams, Link } from 'react-router-dom';
 import { useSeries } from '../hooks/useSeries';
 import Spinner from '../components/ui/Spinner';
 import BackButton from '../components/ui/BackButton';
+import SEO from '../components/seo/SEO';
 
 const slugFrom = (url) => url?.split('/').at(-1);
+const truncate = (s, n = 155) =>
+  !s ? null : s.length > n ? s.slice(0, n).trim() + '…' : s;
 
 export default function SeriesDetail() {
   const { slug } = useParams();
   const { data: series, isLoading, isError } = useSeries(slug);
 
-  if (isLoading) return <Spinner />;
-  if (isError) return <p className="text-imperial-muted">Series not found.</p>;
+  if (isLoading) return <><SEO /><Spinner /></>;
+  if (isError) return <><SEO title="Series not found" noindex /><p className="text-imperial-muted">Series not found.</p></>;
 
   const books = series?.books ?? [];
+  const seoDescription =
+    truncate(series.description) ??
+    `${series.name}${series.era ? ` — a ${series.era} era Warhammer series` : ' — a Warhammer book series'}${
+      books.length ? `, ${books.length} books.` : '.'
+    }`;
 
   return (
     <div className="max-w-3xl mx-auto animate-fade-in">
+      <SEO title={series.name} description={seoDescription} type="article" />
       <BackButton />
 
       <div className="mb-10 pb-8 border-b border-imperial-border">

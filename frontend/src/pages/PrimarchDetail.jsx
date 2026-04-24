@@ -2,8 +2,11 @@ import { useParams, Link } from 'react-router-dom';
 import { usePrimarch } from '../hooks/usePrimarchs';
 import Spinner from '../components/ui/Spinner';
 import BackButton from '../components/ui/BackButton';
+import SEO from '../components/seo/SEO';
 
 const slugFrom = (url) => url?.split('/').at(-1);
+const truncate = (s, n = 155) =>
+  !s ? null : s.length > n ? s.slice(0, n).trim() + '…' : s;
 
 const alignmentTheme = {
   Loyalist: {
@@ -31,14 +34,21 @@ export default function PrimarchDetail() {
   const { slug } = useParams();
   const { data: primarch, isLoading, isError } = usePrimarch(slug);
 
-  if (isLoading) return <Spinner />;
-  if (isError) return <p className="text-imperial-muted">Primarch not found.</p>;
+  if (isLoading) return <><SEO /><Spinner /></>;
+  if (isError) return <><SEO title="Primarch not found" noindex /><p className="text-imperial-muted">Primarch not found.</p></>;
 
   const books = primarch?.books ?? [];
   const t = alignmentTheme[primarch.alignment] ?? fallback;
+  const seoTitle = primarch.legion ? `${primarch.name} — ${primarch.legion}` : primarch.name;
+  const seoDescription =
+    truncate(primarch.fate) ??
+    `${primarch.name}${primarch.legion ? `, Primarch of the ${primarch.legion}` : ''}${
+      primarch.alignment ? ` (${primarch.alignment})` : ''
+    } — Warhammer 40k and Horus Heresy lore.`;
 
   return (
     <div className="max-w-4xl mx-auto animate-fade-in">
+      <SEO title={seoTitle} description={seoDescription} type="profile" />
       <BackButton />
 
       {/* Cinematic header */}

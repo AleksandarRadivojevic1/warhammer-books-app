@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import client from '../api/client';
 import Spinner from '../components/ui/Spinner';
+import SEO from '../components/seo/SEO';
 
 export default function VerifyEmail() {
   const { token } = useParams();
@@ -15,6 +16,7 @@ export default function VerifyEmail() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-imperial-bg px-4">
+      <SEO title="Verify Email" noindex />
       <div className="max-w-md w-full text-center">
         <h1 className="text-3xl mb-4">Librarium</h1>
         {status === 'loading' && <Spinner />}

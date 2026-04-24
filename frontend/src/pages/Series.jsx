@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useSeriesList } from '../hooks/useSeries';
 import Spinner from '../components/ui/Spinner';
+import SEO from '../components/seo/SEO';
 
 export default function Series() {
   const { data, isLoading } = useSeriesList();
@@ -10,6 +11,10 @@ export default function Series() {
 
   return (
     <div>
+      <SEO
+        title="Series"
+        description="Warhammer book series and recommended reading orders — the Horus Heresy, Gaunt's Ghosts, Ultramarines, Eisenhorn, and more."
+      />
       <h1 className="text-3xl mb-8 animate-fade-in">Series</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {series.map((s, i) => (

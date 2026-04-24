@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { usePrimarchs } from '../hooks/usePrimarchs';
 import PrimarchCard from '../components/ui/PrimarchCard';
 import Spinner from '../components/ui/Spinner';
+import SEO from '../components/seo/SEO';
 
 const ALIGNMENTS = ['', 'Loyalist', 'Traitor'];
 
@@ -145,6 +146,10 @@ export default function Primarchs() {
 
   return (
     <div>
+      <SEO
+        title="The Primarchs"
+        description="The twenty Primarchs of the Emperor's legions — their legions, alignments, and fates across the Horus Heresy and the 41st Millennium."
+      />
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
         <h1 className="text-3xl">Primarchs</h1>
         <div className="flex gap-2">

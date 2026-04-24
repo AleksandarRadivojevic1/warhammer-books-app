@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import AuthLayout from '../components/layout/AuthLayout';
 import PasswordInput from '../components/ui/PasswordInput';
+import SEO from '../components/seo/SEO';
 
 export default function Register() {
   const { register } = useAuth();
@@ -32,6 +33,7 @@ export default function Register() {
   if (done) {
     return (
       <AuthLayout title="Check your inbox" eyebrow="Almost there" flip>
+        <SEO title="Check your inbox" noindex />
         <div className="flex flex-col gap-4 animate-fade-in">
           <p className="text-imperial-light/80 text-sm leading-relaxed">
             A verification link has been sent to{' '}
@@ -47,6 +49,7 @@ export default function Register() {
 
   return (
     <AuthLayout title="Create Account" eyebrow="Join the Librarium" flip>
+      <SEO title="Create Account" noindex />
       <form onSubmit={submit} className="flex flex-col gap-4">
         <div>
           <label className="label block mb-1">Email</label>

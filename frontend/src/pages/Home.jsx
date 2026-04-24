@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useFeatured } from '../hooks/useFeatured';
 import FeaturedCarousel from '../components/ui/FeaturedCarousel';
 import Spinner from '../components/ui/Spinner';
+import SEO from '../components/seo/SEO';
 
 function HeroBanner() {
   return (
@@ -50,6 +51,7 @@ export default function Home() {
 
   return (
     <div>
+      <SEO />
       <HeroBanner />
       {isLoading ? <Spinner /> : <FeaturedCarousel books={featured} />}
     </div>

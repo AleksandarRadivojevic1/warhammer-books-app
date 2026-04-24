@@ -19,6 +19,7 @@ import { CSS } from '@dnd-kit/utilities';
 import client from '../api/client';
 import Spinner from '../components/ui/Spinner';
 import EmptyState from '../components/ui/EmptyState';
+import SEO from '../components/seo/SEO';
 
 function useFeaturedAdmin() {
   return useQuery({
@@ -202,6 +203,7 @@ export default function Admin() {
 
   return (
     <div className="max-w-2xl mx-auto">
+      <SEO title="Admin" noindex />
       <h1 className="text-3xl mb-2">Admin</h1>
       <p className="text-imperial-muted mb-10">Manage featured books and monitor app activity.</p>
 

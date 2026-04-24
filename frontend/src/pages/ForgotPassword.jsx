@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import client from '../api/client';
 import AuthLayout from '../components/layout/AuthLayout';
+import SEO from '../components/seo/SEO';
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState('');
@@ -21,6 +22,7 @@ export default function ForgotPassword() {
 
   return (
     <AuthLayout title="Forgot Password" eyebrow="Reset your access">
+      <SEO title="Forgot Password" noindex />
       {sent ? (
         <div className="flex flex-col gap-4 animate-fade-in">
           <p className="text-imperial-light/80 text-sm leading-relaxed">

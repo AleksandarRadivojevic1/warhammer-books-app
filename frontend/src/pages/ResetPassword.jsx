@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import client from '../api/client';
 import AuthLayout from '../components/layout/AuthLayout';
 import PasswordInput from '../components/ui/PasswordInput';
+import SEO from '../components/seo/SEO';
 
 export default function ResetPassword() {
   const { token } = useParams();
@@ -31,6 +32,7 @@ export default function ResetPassword() {
 
   return (
     <AuthLayout title="Reset Password" eyebrow="Set new access codes">
+      <SEO title="Reset Password" noindex />
       <form onSubmit={submit} className="flex flex-col gap-4">
         <div>
           <label className="label block mb-1">New Password</label>

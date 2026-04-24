@@ -1,0 +1,18 @@
+# Librarium — Warhammer Book Library
+
+> A reference catalog of Warhammer 40,000 and Horus Heresy novels, short stories, and audio dramas. Browse the chronicles of the Warhammer universe by book, series, author, or Primarch.
+
+## Navigation
+
+- [Books](https://librarium40k.com/books): Complete catalog of Warhammer 40k and Horus Heresy novels
+- [Series](https://librarium40k.com/series): Multi-book series and recommended reading orders
+- [Authors](https://librarium40k.com/authors): Black Library authors and their works
+- [Primarchs](https://librarium40k.com/primarchs): The twenty Primarchs of the Emperor's legions
+
+## About
+
+Librarium is a reference resource for readers of Warhammer fiction published by Black Library, covering authors such as Dan Abnett, Graham McNeill, Aaron Dembski-Bowden, Guy Haley, James Swallow, and others. The catalog includes standalone novels, ongoing series like Gaunt's Ghosts and Ultramarines, and the Horus Heresy / Siege of Terra arcs.
+
+## API
+
+The underlying data is served by a public REST API at https://warhammer-books-api.onrender.com/api/v1 with endpoints for /books, /authors, /series, and /primarchs.
