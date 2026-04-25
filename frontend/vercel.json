@@ -2,14 +2,20 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/profile", "destination": "/index.html" },
-    { "source": "/admin", "destination": "/index.html" },
-    { "source": "/verify/:token", "destination": "/index.html" },
+    { "source": "/books",             "destination": "/index.html" },
+    { "source": "/books/:slug",       "destination": "/index.html" },
+    { "source": "/series",            "destination": "/index.html" },
+    { "source": "/series/:slug",      "destination": "/index.html" },
+    { "source": "/authors",           "destination": "/index.html" },
+    { "source": "/authors/:slug",     "destination": "/index.html" },
+    { "source": "/primarchs",         "destination": "/index.html" },
+    { "source": "/primarchs/:slug",   "destination": "/index.html" },
+    { "source": "/login",             "destination": "/index.html" },
+    { "source": "/register",          "destination": "/index.html" },
+    { "source": "/forgot-password",   "destination": "/index.html" },
     { "source": "/reset-password/:token", "destination": "/index.html" },
-    { "source": "/books/:slug", "destination": "/index.html" },
-    { "source": "/authors/:slug", "destination": "/index.html" },
-    { "source": "/series/:slug", "destination": "/index.html" },
-    { "source": "/primarchs/:slug", "destination": "/index.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/verify/:token",     "destination": "/index.html" },
+    { "source": "/profile",           "destination": "/index.html" },
+    { "source": "/admin",             "destination": "/index.html" }
   ]
 }
