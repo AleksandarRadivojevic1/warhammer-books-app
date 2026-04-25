@@ -9,6 +9,7 @@
     { "source": "/books/:slug", "destination": "/index.html" },
     { "source": "/authors/:slug", "destination": "/index.html" },
     { "source": "/series/:slug", "destination": "/index.html" },
-    { "source": "/primarchs/:slug", "destination": "/index.html" }
+    { "source": "/primarchs/:slug", "destination": "/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
