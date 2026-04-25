@@ -12,6 +12,10 @@ export default function BookCard({ book, compact = false }) {
           <img
             src={book.coverImage}
             alt={book.title}
+            width="200"
+            height="300"
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         ) : (

@@ -46,15 +46,43 @@ function HeroBanner() {
   );
 }
 
-const websiteJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Librarium',
-  alternateName: 'Librarium — Warhammer Book Library',
-  url: 'https://librarium40k.com',
-  description:
-    'A reference catalog of Warhammer 40,000 and Horus Heresy novels, series, authors, and Primarchs.',
-};
+const websiteJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Librarium',
+    alternateName: 'Librarium — Warhammer Book Library',
+    url: 'https://librarium40k.com',
+    description:
+      'A reference catalog of Warhammer 40,000 and Horus Heresy novels, series, authors, and Primarchs.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://librarium40k.com/books?search={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Librarium',
+    url: 'https://librarium40k.com',
+    logo: 'https://librarium40k.com/og-image.png',
+    description:
+      'A reference catalog of Warhammer 40,000 and Horus Heresy novels, series, authors, and Primarchs.',
+  },
+];
+
+function Disclaimer() {
+  return (
+    <p className="text-center text-xs text-imperial-muted/60 px-4 mb-10 max-w-lg mx-auto leading-relaxed">
+      The catalog is still growing - some books and series may be missing.
+      This is a solo project, so additions take time. Thanks for your patience.
+    </p>
+  );
+}
 
 export default function Home() {
   const { data: featured = [], isLoading } = useFeatured();
@@ -63,6 +91,7 @@ export default function Home() {
     <div>
       <SEO jsonLd={websiteJsonLd} />
       <HeroBanner />
+      <Disclaimer />
       {isLoading ? <Spinner /> : <FeaturedCarousel books={featured} />}
     </div>
   );

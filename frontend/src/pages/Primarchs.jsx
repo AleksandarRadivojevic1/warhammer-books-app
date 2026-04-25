@@ -144,11 +144,30 @@ export default function Primarchs() {
     ? primarchs.filter((p) => !heroSlugs.has(p.slug))
     : rest;
 
+  const allPrimarchs = data?.results ?? [];
+  const jsonLd = allPrimarchs.length ? {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Primarchs of the Space Marine Legions — Librarium',
+    url: 'https://librarium40k.com/primarchs',
+    description: "The twenty Primarchs of the Emperor's Space Marine Legions.",
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: allPrimarchs.map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: p.name,
+        url: `https://librarium40k.com/primarchs/${p.slug}`,
+      })),
+    },
+  } : undefined;
+
   return (
     <div>
       <SEO
         title="The Primarchs"
         description="The twenty Primarchs of the Emperor's legions — their legions, alignments, and fates across the Horus Heresy and the 41st Millennium."
+        jsonLd={jsonLd}
       />
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
         <h1 className="text-3xl">Primarchs</h1>

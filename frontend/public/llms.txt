@@ -16,3 +16,8 @@ Librarium is a reference resource for readers of Warhammer fiction published by 
 ## API
 
 The underlying data is served by a public REST API at https://warhammer-books-api.onrender.com/api/v1 with endpoints for /books, /authors, /series, and /primarchs.
+
+## Extended Reference
+
+Full content index with individual book, author, and series passages:
+https://librarium40k.com/llms-full.txt

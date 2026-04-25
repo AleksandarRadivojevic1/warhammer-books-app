@@ -22,22 +22,31 @@ export default function SeriesDetail() {
       books.length ? `, ${books.length} books.` : '.'
     }`;
 
+  const seriesUrl = `https://librarium40k.com/series/${slug}`;
   const jsonLd = [
     {
       '@context': 'https://schema.org',
       '@type': 'BookSeries',
       name: series.name,
-      url: `https://librarium40k.com/series/${slug}`,
-      publisher: { '@type': 'Organization', name: 'Black Library' },
+      url: seriesUrl,
+      publisher: { '@type': 'Organization', name: 'Black Library', url: 'https://www.blacklibrary.com' },
       ...(series.description && { description: series.description }),
       ...(books.length && { numberOfItems: books.length }),
+      ...(books.length && {
+        hasPart: books.map((b, i) => ({
+          '@type': 'Book',
+          position: b.order ?? i + 1,
+          name: b.title,
+          url: `https://librarium40k.com/books/${slugFrom(b.url)}`,
+        })),
+      }),
     },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Series', item: 'https://librarium40k.com/series' },
-        { '@type': 'ListItem', position: 2, name: series.name },
+        { '@type': 'ListItem', position: 2, name: series.name, item: seriesUrl },
       ],
     },
   ];

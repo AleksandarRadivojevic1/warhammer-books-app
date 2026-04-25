@@ -39,8 +39,10 @@ async function fetchAll(path) {
   });
 }
 
-const entry = (loc, priority, changefreq) =>
-  `  <url>\n    <loc>${escape(loc)}</loc>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+const buildDate = new Date().toISOString().slice(0, 10);
+
+const entry = (loc) =>
+  `  <url>\n    <loc>${escape(loc)}</loc>\n    <lastmod>${buildDate}</lastmod>\n  </url>`;
 
 async function main() {
   console.log('[sitemap] fetching catalog from', API);
@@ -57,15 +59,15 @@ async function main() {
   );
 
   const urls = [
-    entry(`${SITE}/`, '1.0', 'weekly'),
-    entry(`${SITE}/books`, '0.9', 'weekly'),
-    entry(`${SITE}/series`, '0.8', 'monthly'),
-    entry(`${SITE}/authors`, '0.8', 'monthly'),
-    entry(`${SITE}/primarchs`, '0.8', 'monthly'),
-    ...books.map((b) => entry(`${SITE}/books/${b.slug}`, '0.7', 'monthly')),
-    ...series.map((s) => entry(`${SITE}/series/${s.slug}`, '0.6', 'monthly')),
-    ...authors.map((a) => entry(`${SITE}/authors/${a.slug}`, '0.6', 'monthly')),
-    ...primarchs.map((p) => entry(`${SITE}/primarchs/${p.slug}`, '0.6', 'monthly')),
+    entry(`${SITE}/`),
+    entry(`${SITE}/books`),
+    entry(`${SITE}/series`),
+    entry(`${SITE}/authors`),
+    entry(`${SITE}/primarchs`),
+    ...books.map((b)     => entry(`${SITE}/books/${b.slug}`)),
+    ...series.map((s)    => entry(`${SITE}/series/${s.slug}`)),
+    ...authors.map((a)   => entry(`${SITE}/authors/${a.slug}`)),
+    ...primarchs.map((p) => entry(`${SITE}/primarchs/${p.slug}`)),
   ];
 
   const xml =

@@ -2,1472 +2,1178 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://librarium40k.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-path-of-heaven</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/soul-wars</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-world-engine</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/road-of-skulls</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/steel-tread</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-silent-war</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/legends-of-the-dark-millennium-deathwatch</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/echoes-of-the-long-war</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/blood-of-aenarion</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/ahriman-unchanged</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/xenos-eisenhorn</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/witchbringer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/fear-to-tread</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/nemesis</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/battle-of-the-fang</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/tallarn</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/spark-of-revolution</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/ferrus-manus-the-gorgon-of-medusa</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/shaso</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/claws-of-the-genestealer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-curse-of-khaine</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/ahriman-sorcerer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/outlander-necromunda</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/catachan-devil</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/cains-last-stand</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/caves-of-ice</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/penitent-bequin</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/tales-of-heresy</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/fabius-bile-manflayer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/saturnine</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/fulgrim</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/war-without-end</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-first-heretic</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/deathfire</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/angels-of-caliban</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/shattered-legions</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/old-earth</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-devastation-of-baal</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/cardinal-crimson</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/lorgar-bearer-of-the-word</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/crusaders-of-dorn</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/ghostmaker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/blood-and-fire</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-greater-good</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/legion</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/corax-lord-of-shadows</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/kinslayer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/black-legion-novel</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-martyrs-tomb</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/vulkan-lives</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/skaven-pestilens</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/mephiston-blood-of-sanguinius</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-solar-war</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/road-to-redemption</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/overfiend</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/predator-prey</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/fortress-of-ghosts</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/pariah-bequin</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/first-and-only</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/manslayer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-damnation-of-pythos</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-rose-in-anger</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/lion-el-jonson-lord-of-the-first</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-death-of-antagonis</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/daemonbreaker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/sea-of-souls</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/traitor-general</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/scars</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/ruinstorm</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/path-of-the-outcast</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/ahriman-exile</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/blackstone-fortress-ascension</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/for-the-emperor</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/malleus-eisenhorn</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/elfslayer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/corax</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-hand-of-harrow</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/jaghatai-khan-warhawk-of-chogoris</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-purging-of-kadillus</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-eye-of-ezekiel</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/secrets-of-the-tau</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/pilgrims-of-fire</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/betrayer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/horus-rising</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/junktion</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/blood-reaver</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/path-of-the-warrior</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/nagash-the-unbroken</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-beheading</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/dark-creed</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/death-or-glory</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/shadows-of-treachery</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/empire-legend-of-sigmar</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/fleshworks</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/soul-hunter</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/ravenor-rogue</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/of-honour-and-iron</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/throneworld</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-emperors-finest</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-magos</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/skavenslayer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/angel-exterminatus</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/praetorian-of-dorn</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/sylvaneth</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/alpharius-head-of-the-hydra</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/flesh-of-cretacia</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-fall-of-altdorf</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/ahriman-eternal</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/vainglorious</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/his-last-command</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/trollslayer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/giantslayer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/path-of-the-renegade</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/slaughter-at-giants-coffin</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/blades-of-damocles</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/ashes-of-prospero</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/flight-of-the-kharadron</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-last-son-of-dorn</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/malekith</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-gates-of-azyr</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/plague-of-the-nurglings</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-traitors-hand</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/zombieslayer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/mark-of-calth</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/mephiston-lord-of-death</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/mortarion-the-pale-king</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/rynns-world</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-siege-of-castellax</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/storm-of-damocles</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/lord-of-the-end-times</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-rose-at-war</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/necropolis</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/vampireslayer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-flight-of-the-eisenstein</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/black-rift</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/terminal-overkill</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/sword-of-caledor</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-rose-in-darkness</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-armour-of-contempt</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/heralds-of-the-siege</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/deliverance-lost</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/traitor-by-deed</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-first-wall</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/blacktalon-first-mark</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/ahriman-undying</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/straight-silver</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/mechanicum</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-master-of-mankind</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-burden-of-loyalty</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/magnus-the-red-master-of-prospero</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/ravenor</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-gildar-rift</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/pandorax</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/plague-garden</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/resurrection-horusian-wars</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/bane-of-malekith</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/fabius-bile-primogenitor</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-crimson-king</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-warmaster</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-wolftime</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/dark-apostle</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/the-last-wall</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/helsreach</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/angron-slave-of-nuceria</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/books/path-of-the-seer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/time-of-legends</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/gotrek-and-felix</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/the-end-times</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/the-realmgate-wars</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/stormcast-eternals</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/legends-of-the-age-of-sigmar</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/primarchs</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/the-horus-heresy-novels</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/the-siege-of-terra</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/the-beast-arises</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/adepta-sororitas</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/space-marine-battles</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/space-marine-conquests</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/space-marine-legends</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/chaos-space-marines</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/astra-militarum</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/path-of-the-eldar</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/path-of-the-dark-eldar</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/legends-of-the-dark-millennium</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/necromunda</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/ciaphas-cain</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/gaunts-ghosts</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/mephiston</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/eisenhorn</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/ravenor</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/bequin</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/the-horusian-wars</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/blackstone-fortress</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/dawn-of-fire</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/warhammer-adventures</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/novella-series-3</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/night-lords</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/black-legion</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/ahriman</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/word-bearers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/fabius-bile</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/legend-of-sigmar</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/the-sundering</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/series/rise-of-nagash</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/aaron-dembski-bowden</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/andy-chambers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/andy-clark</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/andy-hoare</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/andy-smillie</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/anthony-reynolds</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/ben-counter</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/c-l-werner</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/c-z-dunn</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/cassern-s-goto</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/cavan-scott</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/chris-dows</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/chris-wraight</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/dan-abnett</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/danie-ware</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/darius-hinks</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/david-annandale</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/david-guymer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/denny-flowers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/gary-kloster</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/gav-thorpe</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/george-mann</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/gordon-rennie</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/graeme-lyon</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/graham-mcneill</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/guy-haley</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/ian-st-martin</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/ian-watson</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/j-c-stearns</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/james-swallow</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/john-french</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/josh-reynolds</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/jude-reid</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/justin-d-hill</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/justin-woolley</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/kim-newman</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/l-j-goulding</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/lucien-soulban</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/marc-collins</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/mark-clapham</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/matt-keefe</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/matthew-farrer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/mike-brooks</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/mike-lee</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/mitchel-scanlon</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/nathan-long</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/nick-horth</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/nick-kyme</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/paul-kearney</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/peter-fehervari</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/phil-kelly</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/rs-wilt</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/rachel-harrison</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/richard-williams</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/rob-sanders</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/rob-young</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/robbie-macniven</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/sandy-mitchell</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/sarah-cawkwell</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/steve-lyons</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/steve-parker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/steven-b-fischer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/tom-huddleston</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/victoria-hayward</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/will-mcdermott</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/authors/william-king</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/lion-el-jonson</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/fulgrim</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/perturabo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/jaghatai-khan</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/leman-russ</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/rogal-dorn</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/konrad-curze</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/sanguinius</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/ferrus-manus</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/angron</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/roboute-guilliman</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/mortarion</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/magnus-the-red</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/horus-lupercal</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/lorgar-aurelian</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/vulkan</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/corvus-corax</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/alpharius</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
   <url>
     <loc>https://librarium40k.com/primarchs/omegon</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-25</lastmod>
   </url>
 </urlset>

@@ -20,14 +20,15 @@ export default function AuthorDetail() {
     truncate(author.bio) ??
     `${author.name} — Warhammer author at Black Library${books.length ? `. Browse ${books.length} books.` : '.'}`;
 
+  const authorUrl = `https://librarium40k.com/authors/${slug}`;
   const jsonLd = [
     {
       '@context': 'https://schema.org',
       '@type': 'Person',
       name: author.name,
-      url: `https://librarium40k.com/authors/${slug}`,
+      url: authorUrl,
       jobTitle: 'Author',
-      worksFor: { '@type': 'Organization', name: 'Black Library' },
+      worksFor: { '@type': 'Organization', name: 'Black Library', url: 'https://www.blacklibrary.com' },
       ...(author.bio && { description: author.bio }),
       ...(author.image && { image: author.image }),
     },
@@ -36,14 +37,14 @@ export default function AuthorDetail() {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Authors', item: 'https://librarium40k.com/authors' },
-        { '@type': 'ListItem', position: 2, name: author.name },
+        { '@type': 'ListItem', position: 2, name: author.name, item: authorUrl },
       ],
     },
   ];
 
   return (
     <div className="max-w-3xl mx-auto animate-fade-in">
-      <SEO title={author.name} description={seoDescription} type="profile" jsonLd={jsonLd} />
+      <SEO title={author.name} description={seoDescription} type="profile" image={author.image} jsonLd={jsonLd} />
       <BackButton />
 
       <div className="flex flex-col sm:flex-row gap-6 items-start mb-10 pb-8 border-b border-imperial-border">

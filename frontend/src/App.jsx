@@ -1,27 +1,29 @@
+import { lazy, Suspense } from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import VerificationBanner from './components/ui/VerificationBanner';
 import RequireAuth from './components/guards/RequireAuth';
 import RequireAdmin from './components/guards/RequireAdmin';
+import Spinner from './components/ui/Spinner';
 
 import Home from './pages/Home';
-import Books from './pages/Books';
-import BookDetail from './pages/BookDetail';
-import Authors from './pages/Authors';
-import AuthorDetail from './pages/AuthorDetail';
-import Series from './pages/Series';
-import SeriesDetail from './pages/SeriesDetail';
-import Primarchs from './pages/Primarchs';
-import PrimarchDetail from './pages/PrimarchDetail';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import ForgotPassword from './pages/ForgotPassword';
-import ResetPassword from './pages/ResetPassword';
-import VerifyEmail from './pages/VerifyEmail';
-import Profile from './pages/Profile';
-import Admin from './pages/Admin';
-import NotFound from './pages/NotFound';
+const Books          = lazy(() => import('./pages/Books'));
+const BookDetail     = lazy(() => import('./pages/BookDetail'));
+const Authors        = lazy(() => import('./pages/Authors'));
+const AuthorDetail   = lazy(() => import('./pages/AuthorDetail'));
+const Series         = lazy(() => import('./pages/Series'));
+const SeriesDetail   = lazy(() => import('./pages/SeriesDetail'));
+const Primarchs      = lazy(() => import('./pages/Primarchs'));
+const PrimarchDetail = lazy(() => import('./pages/PrimarchDetail'));
+const Login          = lazy(() => import('./pages/Login'));
+const Register       = lazy(() => import('./pages/Register'));
+const ForgotPassword = lazy(() => import('./pages/ForgotPassword'));
+const ResetPassword  = lazy(() => import('./pages/ResetPassword'));
+const VerifyEmail    = lazy(() => import('./pages/VerifyEmail'));
+const Profile        = lazy(() => import('./pages/Profile'));
+const Admin          = lazy(() => import('./pages/Admin'));
+const NotFound       = lazy(() => import('./pages/NotFound'));
 
 function AuthWrapper() {
   return <main className="flex-1 flex flex-col"><Outlet /></main>;
@@ -40,6 +42,7 @@ export default function App() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <VerificationBanner />
+      <Suspense fallback={<main className="flex-1 flex items-center justify-center"><Spinner /></main>}>
       <Routes>
         <Route element={<AuthWrapper />}>
           <Route path="/login" element={<Login />} />
@@ -63,6 +66,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+      </Suspense>
       <Footer />
     </div>
   );

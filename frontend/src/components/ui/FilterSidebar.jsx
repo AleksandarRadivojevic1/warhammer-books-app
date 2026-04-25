@@ -52,7 +52,7 @@ export default function FilterSidebar({ filters, onChange }) {
       <div>
         <label className="label block mb-1">Sort by</label>
         <Select value={filters.sort ?? ''} onChange={handle('sort')}>
-          <option value="">Order in series</option>
+          <option value="">Default</option>
           <option value="title">Title</option>
           <option value="pages">Pages</option>
         </Select>

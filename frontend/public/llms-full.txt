@@ -1,0 +1,138 @@
+# Librarium — Full Content Index
+# Extended AI/LLM reference for Warhammer 40K and Horus Heresy fiction.
+# Index: https://librarium40k.com/llms.txt
+
+## Notable Books
+
+### Horus Rising
+- URL: https://librarium40k.com/books/horus-rising
+- Author: Dan Abnett
+- Series: Horus Heresy
+- Description: The first novel in the Horus Heresy series. Follows Loken and the Luna Wolves during the Great Crusade and the seeds of Horus's corruption.
+
+### False Gods
+- URL: https://librarium40k.com/books/false-gods
+- Author: Graham McNeill
+- Series: Horus Heresy
+- Description: The second Horus Heresy novel. Horus is wounded on Davin and falls to Chaos, setting the galaxy on the path to civil war.
+
+### Galaxy in Flames
+- URL: https://librarium40k.com/books/galaxy-in-flames
+- Author: Ben Counter
+- Series: Horus Heresy
+- Description: The third Horus Heresy novel. The Isstvan III atrocity — loyalist legionaries purged by their own brothers.
+
+### First and Only
+- URL: https://librarium40k.com/books/first-and-only
+- Author: Dan Abnett
+- Series: Gaunt's Ghosts
+- Description: First novel in the Gaunt's Ghosts series. Introduces Colonel-Commissar Ibram Gaunt and the Tanith First-and-Only regiment.
+
+### Eisenhorn
+- URL: https://librarium40k.com/books/eisenhorn
+- Author: Dan Abnett
+- Series: Eisenhorn
+- Description: Omnibus collecting the Eisenhorn trilogy. Inquisitor Gregor Eisenhorn investigates heresy across the Imperium.
+
+### Prospero Burns
+- URL: https://librarium40k.com/books/prospero-burns
+- Author: Dan Abnett
+- Series: Horus Heresy
+- Description: The Space Wolves' perspective on the burning of Prospero and the fall of Magnus the Red.
+
+### A Thousand Sons
+- URL: https://librarium40k.com/books/a-thousand-sons
+- Author: Graham McNeill
+- Series: Horus Heresy
+- Description: The Thousand Sons' story — Magnus's forbidden sorcery, the Council of Nikaea, and the destruction of Prospero.
+
+### Know No Fear
+- URL: https://librarium40k.com/books/know-no-fear
+- Author: Dan Abnett
+- Series: Horus Heresy
+- Description: The Battle of Calth — the Word Bearers' surprise assault on the Ultramarines.
+
+### The First Heretic
+- URL: https://librarium40k.com/books/the-first-heretic
+- Author: Aaron Dembski-Bowden
+- Series: Horus Heresy
+- Description: The fall of the Word Bearers — how Lorgar and his legion turned to Chaos after being humiliated by the Emperor.
+
+### Betrayer
+- URL: https://librarium40k.com/books/betrayer
+- Author: Aaron Dembski-Bowden
+- Series: Horus Heresy
+- Description: Angron and the World Eaters alongside the Word Bearers in the Shadow Crusade. One of the most acclaimed Horus Heresy novels.
+
+### Dark Imperium
+- URL: https://librarium40k.com/books/dark-imperium
+- Author: Guy Haley
+- Series: Dark Imperium
+- Description: Roboute Guilliman returns from stasis and leads the Indomitus Crusade to reclaim the Imperium in the 42nd Millennium.
+
+### Helsreach
+- URL: https://librarium40k.com/books/helsreach
+- Author: Aaron Dembski-Bowden
+- Description: A Black Templars Reclusiarch defends the hive city of Helsreach during the Third War for Armageddon.
+
+## Notable Authors
+
+### Dan Abnett
+- URL: https://librarium40k.com/authors/dan-abnett
+- Notable works: Horus Rising, Prospero Burns, Know No Fear, Gaunt's Ghosts series, Eisenhorn trilogy
+- Description: Prolific Black Library author and comics writer. Creator of the Gaunt's Ghosts and Eisenhorn series. Considered one of the defining voices of Warhammer 40K fiction.
+
+### Graham McNeill
+- URL: https://librarium40k.com/authors/graham-mcneill
+- Notable works: False Gods, A Thousand Sons, Ultramarines series, Forges of Mars trilogy
+- Description: Former Games Workshop staff writer. Known for the Ultramarines series, Mechanicum, and the A Thousand Sons / Prospero Burns companion arc.
+
+### Aaron Dembski-Bowden
+- URL: https://librarium40k.com/authors/aaron-dembski-bowden
+- Notable works: The First Heretic, Betrayer, Night Lords trilogy, The Emperor's Gift, Helsreach
+- Description: Known for nuanced and sympathetic portrayals of Chaos Space Marines, particularly Night Lords and Word Bearers.
+
+### Guy Haley
+- URL: https://librarium40k.com/authors/guy-haley
+- Notable works: Pharos, Dark Imperium, Plague War, Mortis, Belisarius Cawl
+- Description: Author of the Dark Imperium trilogy covering Roboute Guilliman's return and the Indomitus Crusade in the 42nd Millennium.
+
+### James Swallow
+- URL: https://librarium40k.com/authors/james-swallow
+- Notable works: Flight of the Eisenstein, Fear to Tread, Blood Angels series
+- Description: Known for Blood Angels fiction and the story of Battle-Captain Nathaniel Garro, first of the Knights-Errant.
+
+### Chris Wraight
+- URL: https://librarium40k.com/authors/chris-wraight
+- Notable works: Battle of the Fang, Scars, The Path of Heaven, Valdris Brekk series
+- Description: Known for the White Scars arc in the Horus Heresy and the Vaults of Terra series.
+
+## Series Index
+
+### Horus Heresy
+- URL: https://librarium40k.com/series/horus-heresy
+- Description: 54-novel series covering the galaxy-wide civil war between the Emperor's loyal sons and the traitor Primarchs. Begins with Horus Rising by Dan Abnett.
+
+### Siege of Terra
+- URL: https://librarium40k.com/series/siege-of-terra
+- Description: Sub-series concluding the Horus Heresy. Covers the final assault on Terra and the Emperor's Palace. Begins with Solar War by John French.
+
+### Gaunt's Ghosts
+- URL: https://librarium40k.com/series/gaunts-ghosts
+- Description: Long-running series by Dan Abnett following the Tanith First-and-Only regiment and their Commissar, Ibram Gaunt, across the Sabbat Worlds Crusade.
+
+### Eisenhorn
+- URL: https://librarium40k.com/series/eisenhorn
+- Description: Trilogy by Dan Abnett following Inquisitor Gregor Eisenhorn as he pursues heresy across decades, testing the boundary between radical and puritan.
+
+### Dark Imperium
+- URL: https://librarium40k.com/series/dark-imperium
+- Description: Trilogy by Guy Haley set in the 42nd Millennium following Roboute Guilliman's return, the Indomitus Crusade, and the war against Mortarion's Death Guard.
+
+### Night Lords
+- URL: https://librarium40k.com/series/night-lords
+- Description: Trilogy by Aaron Dembski-Bowden following the renegade Night Lords warband of Talos Valcoran — a rare sympathetic portrayal of Chaos Space Marines.
+
+### Ultramarines
+- URL: https://librarium40k.com/series/ultramarines
+- Description: Six-novel series by Graham McNeill following Captain Uriel Ventris of the Ultramarines through battles across the galaxy.

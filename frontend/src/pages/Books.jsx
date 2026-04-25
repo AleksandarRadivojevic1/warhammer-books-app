@@ -14,11 +14,29 @@ export default function Books() {
   const totalPages = data?.count ? Math.ceil(data.count / 48) : 1;
   const page = filters.page ?? 1;
 
+  const jsonLd = books.length ? {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Warhammer 40K Books — Librarium',
+    url: 'https://librarium40k.com/books',
+    description: 'Complete catalog of Warhammer 40,000 and Horus Heresy novels.',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: books.slice(0, 50).map((b, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: b.title,
+        url: `https://librarium40k.com/books/${b.slug}`,
+      })),
+    },
+  } : undefined;
+
   return (
     <div>
       <SEO
         title="Books"
         description="Complete catalog of Warhammer 40,000 and Horus Heresy novels — browse hundreds of books by author, series, faction, and setting."
+        jsonLd={jsonLd}
       />
       <h1 className="text-3xl mb-8">Books</h1>
       <div className="flex flex-col md:flex-row gap-8">

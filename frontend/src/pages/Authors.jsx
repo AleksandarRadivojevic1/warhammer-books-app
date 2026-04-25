@@ -12,11 +12,29 @@ export default function Authors() {
 
   if (isLoading || isFetching) return <Spinner />;
 
+  const jsonLd = authors.length ? {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Black Library Authors — Librarium',
+    url: 'https://librarium40k.com/authors',
+    description: 'Black Library authors who shaped the Warhammer universe.',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: authors.slice(0, 50).map((a, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: a.name,
+        url: `https://librarium40k.com/authors/${a.slug}`,
+      })),
+    },
+  } : undefined;
+
   return (
     <div>
       <SEO
         title="Authors"
         description="Black Library authors who shaped the Warhammer universe — Dan Abnett, Graham McNeill, Aaron Dembski-Bowden, Guy Haley, James Swallow, and more."
+        jsonLd={jsonLd}
       />
       <h1 className="text-3xl mb-8 animate-fade-in">Authors</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">

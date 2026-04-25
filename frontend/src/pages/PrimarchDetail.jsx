@@ -46,18 +46,36 @@ export default function PrimarchDetail() {
       primarch.alignment ? ` (${primarch.alignment})` : ''
     } — Warhammer 40k and Horus Heresy lore.`;
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Primarchs', item: 'https://librarium40k.com/primarchs' },
-      { '@type': 'ListItem', position: 2, name: primarch.name },
-    ],
-  };
+  const primarchUrl = `https://librarium40k.com/primarchs/${slug}`;
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: primarch.name,
+      url: primarchUrl,
+      ...(primarch.fate && { description: primarch.fate }),
+      ...(primarch.image && { image: primarch.image }),
+      ...(primarch.legion && {
+        affiliation: { '@type': 'Organization', name: primarch.legion },
+      }),
+      additionalProperty: [
+        ...(primarch.alignment ? [{ '@type': 'PropertyValue', name: 'alignment', value: primarch.alignment }] : []),
+        ...(primarch.status ? [{ '@type': 'PropertyValue', name: 'status', value: primarch.status }] : []),
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Primarchs', item: 'https://librarium40k.com/primarchs' },
+        { '@type': 'ListItem', position: 2, name: primarch.name, item: primarchUrl },
+      ],
+    },
+  ];
 
   return (
     <div className="max-w-4xl mx-auto animate-fade-in">
-      <SEO title={seoTitle} description={seoDescription} type="profile" jsonLd={jsonLd} />
+      <SEO title={seoTitle} description={seoDescription} type="profile" image={primarch.image} jsonLd={jsonLd} />
       <BackButton />
 
       {/* Cinematic header */}

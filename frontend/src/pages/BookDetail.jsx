@@ -98,6 +98,8 @@ export default function BookDetail() {
     } — a Warhammer novel from Black Library.`;
 
   const bookUrl = `https://librarium40k.com/books/${slug}`;
+  const authorSlug = slugFrom(book.author?.url);
+  const seriesSlug = slugFrom(book.series?.url);
   const jsonLd = [
     {
       '@context': 'https://schema.org',
@@ -105,14 +107,22 @@ export default function BookDetail() {
       name: book.title,
       url: bookUrl,
       inLanguage: 'en',
-      bookFormat: 'https://schema.org/Paperback',
-      publisher: { '@type': 'Organization', name: 'Black Library' },
+      bookFormat: book.pages ? 'https://schema.org/Paperback' : 'https://schema.org/EBook',
+      publisher: { '@type': 'Organization', name: 'Black Library', url: 'https://www.blacklibrary.com' },
       ...(book.author?.name && {
-        author: { '@type': 'Person', name: book.author.name },
+        author: {
+          '@type': 'Person',
+          name: book.author.name,
+          ...(authorSlug && { url: `https://librarium40k.com/authors/${authorSlug}` }),
+        },
       }),
       ...(book.coverImage && { image: book.coverImage }),
       ...(book.series?.name && {
-        isPartOf: { '@type': 'BookSeries', name: book.series.name },
+        isPartOf: {
+          '@type': 'BookSeries',
+          name: book.series.name,
+          ...(seriesSlug && { url: `https://librarium40k.com/series/${seriesSlug}` }),
+        },
       }),
       ...(book.pages && { numberOfPages: book.pages }),
       ...(book.description && { description: book.description }),
@@ -122,14 +132,14 @@ export default function BookDetail() {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Books', item: 'https://librarium40k.com/books' },
-        { '@type': 'ListItem', position: 2, name: book.title },
+        { '@type': 'ListItem', position: 2, name: book.title, item: bookUrl },
       ],
     },
   ];
 
   return (
     <div className="max-w-4xl mx-auto animate-fade-in">
-      <SEO title={seoTitle} description={seoDescription} type="article" jsonLd={jsonLd} />
+      <SEO title={seoTitle} description={seoDescription} type="article" image={book.coverImage} jsonLd={jsonLd} />
       <BackButton />
 
       <div className="flex flex-col md:flex-row gap-8 mb-10">

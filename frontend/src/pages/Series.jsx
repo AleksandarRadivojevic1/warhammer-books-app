@@ -9,11 +9,29 @@ export default function Series() {
 
   if (isLoading) return <Spinner />;
 
+  const jsonLd = series.length ? {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Warhammer Book Series — Librarium',
+    url: 'https://librarium40k.com/series',
+    description: 'Warhammer book series and recommended reading orders.',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: series.slice(0, 50).map((s, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: s.name,
+        url: `https://librarium40k.com/series/${s.slug}`,
+      })),
+    },
+  } : undefined;
+
   return (
     <div>
       <SEO
         title="Series"
         description="Warhammer book series and recommended reading orders — the Horus Heresy, Gaunt's Ghosts, Ultramarines, Eisenhorn, and more."
+        jsonLd={jsonLd}
       />
       <h1 className="text-3xl mb-8 animate-fade-in">Series</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
