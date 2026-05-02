@@ -68,12 +68,12 @@ export default function FeaturedCarousel({ books }) {
         ref={trackRef}
         className={`flex gap-4 overflow-x-auto scrollbar-hide pb-1 ${showArrows ? 'snap-x snap-mandatory' : 'flex-wrap'}`}
       >
-        {books.map((book) => (
+        {books.map((book, i) => (
           <div
             key={book.slug}
             className="snap-start shrink-0 w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)] md:w-[calc(25%-12px)] lg:w-[calc(20%-13px)]"
           >
-            <BookCard book={book} />
+            <BookCard book={book} priority={i === 0} />
           </div>
         ))}
       </div>

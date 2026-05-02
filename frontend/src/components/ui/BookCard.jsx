@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // We extract the slug from the end of the URL to build our internal links.
 const slugFrom = (url) => url?.split('/').at(-1);
 
-export default function BookCard({ book, compact = false }) {
+export default function BookCard({ book, compact = false, priority = false }) {
   return (
     <Link to={`/books/${book.slug}`} className="card flex flex-col group">
       <div className="aspect-[2/3] bg-imperial-bg-mid overflow-hidden">
@@ -14,8 +14,9 @@ export default function BookCard({ book, compact = false }) {
             alt={book.title}
             width="200"
             height="300"
-            loading="lazy"
-            decoding="async"
+            loading={priority ? 'eager' : 'lazy'}
+            fetchpriority={priority ? 'high' : 'auto'}
+            decoding={priority ? 'sync' : 'async'}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         ) : (

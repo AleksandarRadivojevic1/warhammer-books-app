@@ -79,7 +79,7 @@ export default function SeriesDetail() {
               <li
                 key={book.url}
                 className="animate-fade-in-up"
-                style={{ animationDelay: `${i * 40}ms` }}
+                style={{ animationDelay: `${Math.min(i, 9) * 40}ms` }}
               >
                 <Link
                   to={`/books/${slugFrom(book.url)}`}

@@ -113,6 +113,10 @@ export default function PrimarchDetail() {
             <img
               src={primarch.image}
               alt={primarch.name}
+              width="600"
+              height="450"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-top"
             />
           ) : (
@@ -135,7 +139,7 @@ export default function PrimarchDetail() {
               <li
                 key={book.url}
                 className="animate-fade-in-up"
-                style={{ animationDelay: `${i * 40}ms` }}
+                style={{ animationDelay: `${Math.min(i, 9) * 40}ms` }}
               >
                 <Link
                   to={`/books/${slugFrom(book.url)}`}

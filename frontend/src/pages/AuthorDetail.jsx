@@ -53,6 +53,10 @@ export default function AuthorDetail() {
             <img
               src={author.image}
               alt={author.name}
+              width="128"
+              height="128"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-contain"
             />
           ) : (
@@ -76,7 +80,7 @@ export default function AuthorDetail() {
               <li
                 key={book.url}
                 className="animate-fade-in-up"
-                style={{ animationDelay: `${i * 40}ms` }}
+                style={{ animationDelay: `${Math.min(i, 9) * 40}ms` }}
               >
                 <Link
                   to={`/books/${slugFrom(book.url)}`}
