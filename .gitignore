@@ -140,3 +140,5 @@ vite.config.ts.timestamp-*
 
 # Superpowers
 .superpowers/
+.vercel
+.env*.local
