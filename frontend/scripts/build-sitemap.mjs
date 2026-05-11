@@ -11,7 +11,7 @@ import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
-const API = 'https://warhammer-books-api.onrender.com/api/v1';
+const API = process.env.VITE_BOOKS_API_URL ?? 'https://warhammer-books-api.onrender.com/api/v1';
 const SITE = 'https://librarium40k.com';
 const OUT = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public', 'sitemap.xml');
 

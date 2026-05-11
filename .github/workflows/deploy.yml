@@ -50,6 +50,7 @@ jobs:
         run: npm run build
         env:
           VITE_API_URL: ${{ secrets.VITE_API_URL }}
+          VITE_BOOKS_API_URL: ${{ secrets.VITE_BOOKS_API_URL }}
           NODE_OPTIONS: --max-old-space-size=4096
 
       # Run packaging and deploy from the repo root so Vercel's "directory: frontend"

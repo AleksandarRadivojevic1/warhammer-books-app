@@ -22,7 +22,7 @@ const DIST = resolve(ROOT, 'dist');
 const PORT = 4173;
 const CONCURRENCY = 1;
 const TIMEOUT_MS = 45_000;
-const API_WARMUP = 'https://warhammer-books-api.onrender.com/api/v1/books?page=1';
+const API_WARMUP = `${process.env.VITE_BOOKS_API_URL ?? 'https://warhammer-books-api.onrender.com/api/v1'}/books?page=1`;
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
