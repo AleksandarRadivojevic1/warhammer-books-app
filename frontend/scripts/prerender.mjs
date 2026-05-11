@@ -20,7 +20,7 @@ import { createServer } from 'node:http';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = resolve(ROOT, 'dist');
 const PORT = 4173;
-const CONCURRENCY = 3;
+const CONCURRENCY = 1;
 const TIMEOUT_MS = 45_000;
 const API_WARMUP = 'https://warhammer-books-api.onrender.com/api/v1/books?page=1';
 
