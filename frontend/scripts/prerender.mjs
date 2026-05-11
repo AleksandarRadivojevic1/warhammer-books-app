@@ -91,10 +91,10 @@ function outPath(pathname) {
 
 const MAX_ATTEMPTS = 3;
 
-async function renderOne(browser, pathname) {
+async function renderOne(context, pathname) {
   let lastErr;
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-    const page = await browser.newPage();
+    const page = await context.newPage();
     const pageErrors = [];
     page.on('console', (msg) => {
       if (msg.type() === 'error') pageErrors.push(msg.text());
@@ -168,18 +168,13 @@ async function main() {
   const server = await startStaticServer(DIST, PORT);
   // CORS/same-origin policy is hostile to build-time snapshotting — the
   // API allow-list is scoped to production origin(s) while we render from
-  // localhost. Disabling web security is safe here because we control the
-  // browser and the pages it visits.
-  // '--disable-web-security' is required so the prerender browser (serving from
-  // localhost:4173) can reach the API backend whose CORS allow-list only includes
-  // the production origin. Chrome 107+ silently ignores the flag unless a
-  // '--user-data-dir' is also provided — without it every cross-origin request
-  // is blocked and ALL detail pages show "not found".
-  const browser = await chromium.launch({
-    args: [
-      '--disable-web-security',
-      '--user-data-dir=/tmp/prerender-chrome',
-    ],
+  // localhost. Disabling web security lets the prerender browser reach the
+  // Railway auth backend whose CORS allow-list only includes the production
+  // origin. Chrome 107+ silently ignores '--disable-web-security' unless a
+  // user-data-dir is provided — launchPersistentContext is the Playwright-
+  // approved way to supply one.
+  const context = await chromium.launchPersistentContext('/tmp/prerender-chrome', {
+    args: ['--disable-web-security'],
   });
 
   let done = 0;
@@ -190,7 +185,7 @@ async function main() {
     while (queue.length) {
       const path = queue.shift();
       try {
-        await renderOne(browser, path);
+        await renderOne(context, path);
         done++;
         if (done % 25 === 0 || done === urls.length) {
           console.log(`[prerender] ${done}/${urls.length}`);
@@ -206,7 +201,7 @@ async function main() {
   try {
     await Promise.all(Array.from({ length: CONCURRENCY }, worker));
   } finally {
-    await browser.close();
+    await context.close();
     server.close();
   }
 
