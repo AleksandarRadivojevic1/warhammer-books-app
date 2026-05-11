@@ -52,10 +52,13 @@ jobs:
           VITE_API_URL: ${{ secrets.VITE_API_URL }}
           NODE_OPTIONS: --max-old-space-size=4096
 
+      # Run packaging and deploy from the repo root so Vercel's "directory: frontend"
+      # project setting resolves to root/frontend, not frontend/frontend.
       - name: Package for Vercel Build Output API
+        working-directory: ${{ github.workspace }}
         run: |
           mkdir -p .vercel/output/static
-          cp -r dist/. .vercel/output/static/
+          cp -r frontend/dist/. .vercel/output/static/
           cat > .vercel/output/config.json << 'EOF'
           {
             "version": 3,
@@ -83,7 +86,8 @@ jobs:
           EOF
 
       - name: Deploy to Vercel
-        run: npx vercel deploy --prebuilt --prod --yes
+        working-directory: ${{ github.workspace }}
+        run: frontend/node_modules/.bin/vercel deploy --prebuilt --prod --yes
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
