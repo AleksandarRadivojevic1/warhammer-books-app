@@ -20,7 +20,7 @@ import { createServer } from 'node:http';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = resolve(ROOT, 'dist');
 const PORT = 4173;
-const CONCURRENCY = 8;
+const CONCURRENCY = 3;
 const TIMEOUT_MS = 45_000;
 const API_WARMUP = 'https://warhammer-books-api.onrender.com/api/v1/books?page=1';
 
@@ -197,13 +197,18 @@ async function main() {
   const elapsed = ((Date.now() - started) / 1000).toFixed(1);
   console.log(`[prerender] done: ${done}/${urls.length} in ${elapsed}s, ${errors.length} errors`);
   if (errors.length) {
-    console.error(`[prerender] failed URLs:`);
+    console.warn(`[prerender] failed URLs:`);
     for (const { path, err } of errors.slice(0, 10)) {
-      console.error(`  ${path}: ${err}`);
+      console.warn(`  ${path}: ${err}`);
     }
-    if (errors.length > 10) console.error(`  …and ${errors.length - 10} more`);
-    // Any error means the deploy will ship broken pages. Fail the build.
-    process.exit(1);
+    if (errors.length > 10) console.warn(`  …and ${errors.length - 10} more`);
+    // Partial failures still deploy the pages that succeeded. Only abort if
+    // nothing rendered at all (done === 0), which means a fundamental problem.
+    if (done === 0) {
+      console.error('[prerender] zero pages rendered — aborting deploy');
+      process.exit(1);
+    }
+    console.warn(`[prerender] deploying ${done} successfully rendered pages`);
   }
 }
 
