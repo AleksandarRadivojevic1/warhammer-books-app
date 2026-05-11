@@ -29,21 +29,6 @@ jobs:
       - name: Install Playwright system dependencies
         run: npx playwright install-deps chromium
 
-      # Render.com free tier sleeps — retry up to 2 minutes before building
-      - name: Wake up Render API
-        run: |
-          echo "Warming up API..."
-          for i in $(seq 1 12); do
-            STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 \
-              "https://warhammer-books-api.onrender.com/api/v1/books?page=1")
-            if [ "$STATUS" = "200" ]; then
-              echo "API ready (attempt $i)"
-              break
-            fi
-            echo "Attempt $i: HTTP $STATUS — retrying in 10s..."
-            sleep 10
-          done
-
       # prebuild (sitemap) + vite build + postbuild (prerender) all run here.
       # VERCEL is not set in GH Actions so unless-vercel.mjs won't skip prerender.
       - name: Build
