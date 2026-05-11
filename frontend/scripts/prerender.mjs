@@ -95,6 +95,11 @@ async function renderOne(browser, pathname) {
   let lastErr;
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     const page = await browser.newPage();
+    const pageErrors = [];
+    page.on('console', (msg) => {
+      if (msg.type() === 'error') pageErrors.push(msg.text());
+    });
+    page.on('pageerror', (err) => pageErrors.push(err.message));
     try {
       await page.goto(`http://localhost:${PORT}${pathname}`, {
         waitUntil: 'domcontentloaded',
@@ -127,6 +132,9 @@ async function renderOne(browser, pathname) {
       return;
     } catch (err) {
       lastErr = err;
+      if (pageErrors.length) {
+        console.warn(`[prerender] browser errors on ${pathname}:`, pageErrors.slice(0, 3).join(' | '));
+      }
       if (attempt < MAX_ATTEMPTS) {
         await new Promise((r) => setTimeout(r, 1000 * attempt));
       }
@@ -162,8 +170,16 @@ async function main() {
   // API allow-list is scoped to production origin(s) while we render from
   // localhost. Disabling web security is safe here because we control the
   // browser and the pages it visits.
+  // '--disable-web-security' is required so the prerender browser (serving from
+  // localhost:4173) can reach the API backend whose CORS allow-list only includes
+  // the production origin. Chrome 107+ silently ignores the flag unless a
+  // '--user-data-dir' is also provided — without it every cross-origin request
+  // is blocked and ALL detail pages show "not found".
   const browser = await chromium.launch({
-    args: ['--disable-web-security'],
+    args: [
+      '--disable-web-security',
+      '--user-data-dir=/tmp/prerender-chrome',
+    ],
   });
 
   let done = 0;
