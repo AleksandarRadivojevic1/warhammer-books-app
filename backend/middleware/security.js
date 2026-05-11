@@ -16,7 +16,7 @@ const globalLimiter = isTest
   ? noOp
   : rateLimit({
       windowMs: 15 * 60 * 1000,
-      max: isDev ? 1000 : 300,
+      max: isDev ? 1000 : 5000,
       standardHeaders: true,
       legacyHeaders: false,
       message: { error: 'Too many requests, please try again later.' },
