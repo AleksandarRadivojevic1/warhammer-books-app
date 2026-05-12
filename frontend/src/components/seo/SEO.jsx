@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
-const SITE_NAME = 'Librarium';
+const SITE_NAME = 'Librarium 40K';
 const SITE_URL = 'https://librarium40k.com';
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 const DEFAULT_DESCRIPTION =
@@ -18,7 +18,7 @@ export default function SEO({
 }) {
   const { pathname } = useLocation();
   const url = canonical ?? `${SITE_URL}${pathname}`;
-  const fullTitle = title ? `${title} — ${SITE_NAME}` : `${SITE_NAME} — Warhammer Book Library`;
+  const fullTitle = title ? `${title} - ${SITE_NAME}` : `${SITE_NAME} - Warhammer Book Library`;
 
   // Escape the closing-tag sequence so a stray `</script>` inside a JSON
   // string value can never break out of the script block.

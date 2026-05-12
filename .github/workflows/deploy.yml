@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # Rebuild every Monday at 03:00 UTC — picks up new catalog entries added
+    # to the API since the last deploy and gets them prerendered and indexed.
+    - cron: '0 3 * * 1'
 
 defaults:
   run:

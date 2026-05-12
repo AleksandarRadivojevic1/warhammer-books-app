@@ -28,7 +28,7 @@ export default function Navbar() {
     <header className="bg-imperial-bg-mid border-b border-imperial-border relative z-40">
       <nav className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link to="/" className="font-serif text-xl text-imperial-gold tracking-wide">
-          Librarium
+          Librarium 40K
         </Link>
 
         {/* Desktop links */}
@@ -80,7 +80,7 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50 bg-imperial-bg flex flex-col px-8 py-6 animate-fade-in">
           <div className="flex items-center justify-between mb-12">
             <Link to="/" onClick={close} className="font-serif text-2xl text-imperial-gold tracking-wide">
-              Librarium
+              Librarium 40K
             </Link>
             <button
               onClick={close}

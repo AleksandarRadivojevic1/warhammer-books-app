@@ -33,7 +33,7 @@ function HeroBanner() {
           In the grim darkness of the far future
         </p>
         <h1 className="text-5xl md:text-7xl mb-6 leading-none tracking-widest font-black">
-          Librarium
+          Librarium 40K
         </h1>
         <p className="text-imperial-light/60 max-w-lg mx-auto mb-8 text-base leading-relaxed">
           Browse the chronicles of the Warhammer Universe - books, series, primarchs, and the authors who shaped the lore.
@@ -50,8 +50,8 @@ const websiteJsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Librarium',
-    alternateName: 'Librarium — Warhammer Book Library',
+    name: 'Librarium 40K',
+    alternateName: 'Librarium 40K — Warhammer Book Library',
     url: 'https://librarium40k.com',
     description:
       'A reference catalog of Warhammer 40,000 and Horus Heresy novels, series, authors, and Primarchs.',
@@ -67,7 +67,7 @@ const websiteJsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Librarium',
+    name: 'Librarium 40K',
     url: 'https://librarium40k.com',
     logo: 'https://librarium40k.com/og-image.png',
     description:
